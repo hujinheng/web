@@ -1,0 +1,1225 @@
+@charset "utf-8";
+/*@import "import.css";*/
+/*
+CSS文本样式:(文本装饰 英文大小写转换 文本阴影)
+color               颜色
+font-size           字体大小
+font-size:xx-small  字体变很小
+font-size:xx-large  字体变大一点
+font-size:small     字体相对父元素的大小
+font-size:large     字体相对父元素的大小
+font-variant:small-caps  小写字母以小型大写字母显示
+font-variant:normal      如果以上面的small-caps为样式  这个样式会让它恢复小写状态
+margin              外边距
+padding             内边距
+background          背景色
+font-style:italic;  倾斜
+font-style:normal;  让倾斜状态恢复到正常状态
+font-style:oblique; 让文字倾斜 区别在没有斜体时使用
+font-weight:bold;   加粗
+font-weight:normal; 让加粗状态恢复到正常状态
+font-weight:bolder; 更粗
+font-weight:lighter; 轻细的字体
+font-weight:100~900之间的数字; 600及之后是加粗
+border              边框大小 颜色...
+font-family:微软雅黑; 字体类型 可以多个选择:font-family:微软雅黑,宋体,...;
+font: italic bolder small-caps 50px 宋体;    简写格式:[是否倾斜|是否加粗|是否转小型大写] 字体大小 字体名称
+web字体定义:
+@font-face {
+	font-family:"abc";   自定义
+	src:url('字体名称.后缀');
+}
+font-family: abc;   用法
+text-decoration: underline; 下划线
+text-decoration: overline; 上划线
+text-decoration: line-through; 删除线
+text-decoration: blink; 让文本闪烁 基本不支持了
+text-decoration: none; 让原本有划线的去掉
+text-transform: uppercase; 英文文本小写转换为大写
+text-transform: lowercase; 英文文本大写转换为小写
+text-transform: capitalize; 将开头英文字母大写(如果lang="zh-cn"下 需要中英文间要空格才能识别开头)
+text-transform: none; 把已经转换成大小写的状态恢复到原来状态
+text-shadow: 5px 5px 3px black;  水平偏移 垂直偏移 阴影模糊度(可选) 阴影颜色(可选)
+text-align: left;居左
+text-align: right;居右
+text-align: center;居中
+text-align: justify;两端对齐
+text-align: start;让文本处于开始边界
+text-align: end; 让文本处于结束边界
+white-space:normal;空白符压缩 文本自动换行
+white-space:nowrap;空白符压缩 文本不换行
+white-space:pre;空白符保留 遇到换行符换行
+white-space:pre-line;空白符压缩 文本会在排满或遇换行符换行
+white-space:pre-wrap;空白符保留 文本会在排满或遇换行符换行
+letter-spacing:5px;文本间距
+word-spacing:14px;英文单词间距
+line-height:50px;段落行高 长度值:数字+px; 数值 1 2 3; % 200%
+word-wrap:break-word;断开单词 英文单词过长自动换行
+text-indent:20px;文本首行缩进 长度值:数字+px; 数值 1 2 3; % 200%
+
+*/
+/*
+min-width:100px;   最小宽(可能被拖拽浏览器) 长度值或百分比
+min-height:100px; 最小高(可能被拖拽浏览器)    长度值或百分比
+max-width:100px;  最大宽(可能被拖拽浏览器)     长度值或百分比
+max-height:100px; 最大高(可能被拖拽浏览器)    长度值或百分比 
+
+padding-top:10px;     顶内边距
+padding-bottom:10px;  底内边距
+padding-left:10px;   左内边距
+padding-right:10px;  右内边距
+padding:10px;        上下左右各内边距空10px
+padding:10px 20px;        上下内边距空10px 左右内边距空20px
+padding:10px 20px 30px;        上内边距空10px 左右内边距空20px 下内边距空30px
+padding:10px 20px 30px 40px;        顺序 上右下左
+
+visibility: visible; 默认显示
+visibility: hidden;  隐藏
+visibility: collapse;  元素不可见 隐藏表格的行列 如果不是表格 则和hidden效果相同
+
+overflow-x:属性值;
+overflow-y:属性值;
+overflow:属性值;
+属性值:
+auto 浏览器自行处理溢出  有溢出出现滚动条 没有就不显示
+hidden 如果有溢出的内容直接剪掉
+scroll 不管是否溢出都会出现滚动条 但不同平台和浏览器显示方式不同
+visible 默认值 不管是否溢出 都显示内容
+
+
+块元素:div p ...   可以设置宽高  隔离其他元素(其他元素在它后面要另起一行)
+行元素:span b ...  无法设置宽高 无法隔离其他元素
+行内-块元素:img ... 可以设置宽高 无法隔离其他元素
+display:
+inline:       转换为盒子为行内元素
+block:        转换为盒子为块元素
+inline-block：转换为行内块元素
+none：        盒子不可见 不占位
+*/
+/*
+span{
+	background:silver;
+	width:200px;
+	height:200px;
+	display: block;
+}
+*/
+/*
+div{
+	background:silver;
+	width:200px;
+	height:200px;
+*/	
+	/*display: inline;*/
+	/*padding:10px 20px 30px 40px; */
+	/*overflow-y:auto;*/
+/*
+}
+*/
+/*
+div,span{
+	background:silver;
+	width:200px;
+	height:200px;
+	display: inline-block;
+}
+span{
+	display: none;
+}
+*/
+/*浮动*/
+/*
+float:left 左浮动
+float:right 右浮动
+float:none 两边都不可浮动
+
+clear:left  清理左浮动
+clear:right 清理右浮动
+clear:both  清理两边浮动
+ */
+/*
+边框与背景:盒模型的尺寸可以通过两种方式实现可见 边框和背景
+border-style: 
+solid 实线
+none  没有边框
+dashed 破折线边框
+dotted 远点线边框
+double 双线边框
+groove 槽线边框
+inset  使元素内容具有内嵌效果的边框
+outset 使元素内容具有外凸效果的边框
+ridge  脊线边框
+border-color: 默认黑色
+border-width: 默认3px thin medium thick 依次从薄到厚
+border:10px solid red;border综合上述写法:大小 类型 颜色
+单独设置某一条线框
+border-top-style：
+border-top-color:
+border-top-width：
+简写:border-top:10px solid red;跟border一样
+以此类推:border-bottom border-left border-right 
+圆角边框:
+border-radius 10px; 或者 border-radius: 10px 20px 30px 40px; 顺时针设置 也可以统一设置一个值
+border-top-right-radius 右上角
+border-top-left-radius   左上角
+border-bottom-right-radius 右下角
+border-bottom-left-radius  左下角
+背景
+background-color 颜色
+background-image 背景图片
+
+background-repeat 背景图的样式名称 
+repeat:水平垂直平铺 repeat-x:水平平铺 repeat-y:垂直平铺 no-repeat:禁止平铺
+
+background-size 背景图像尺寸 
+auto: 默认值 图像以本尺寸显示
+cover 等比例缩放图像 使图像至少覆盖容器 有可能超出容器
+contain 等比例缩放图像 使宽高中较大者与容器横向或纵向重合 简而言之 尽可能显示完整的图填充容器
+background-size: 100px 200px;宽100 高200
+background-size:10% 90%;或者background-size:10%;
+
+background-position 背景图的位置坐标 top left right bottom center (right top) (left bottom) (...)
+注意:如果想设置浏览器bottom 不要在body区域 在html区域 并且参数是100% 
+
+background-attachment 背景图的滚动方式
+scroll 背景和文字一起滚动
+fixed 背景不动 文字滚动
+
+background-clip 背景图的裁剪方式
+border-box 默认值 
+padding-box 裁掉边框上的背景
+content-box 裁掉内容盒子外的背景
+
+background-origin 背景图的起始点
+padding-box 默认值 在内边距盒子内部绘制背景
+border-box 与元素盒子内部绘制背景 与边框重叠
+content-box 在内容盒子内部绘制背景
+
+background 背景图简写方式
+顺序:
+background-color
+background-image
+background-repeat
+background-attachment
+background-position / background-size
+background-origin
+background-clip
+
+transparent 透明色
+*/
+/*
+div{
+	width:200px;
+	height:200px;
+	border:10px solid red;
+	border-radius: 10px 20px 30px 40px;
+}
+*/
+div{
+	/*width:500px;*/
+	/*height:200px;*/
+	/*background-color: silver;*/
+	/*background-image: url(htmlpic/pic1.png);*/
+	/*border:10px dashed red;*/
+	/*padding:50px;*/
+	/*background-repeat: no-repeat;*/
+	/*background-position: center;*/
+	/*background-size:100px;*/
+	/*background-attachment:fixed;*/
+	/*background-origin:border-box;*/
+	/*background-clip:content-box;*/
+	/*background: silver url(htmlpic/pic1.png) no-repeat top left / 100% border-box content-box;*/
+}
+/*div b{
+	background-color: red;
+}*/
+/*设置第一个b的标签是透明色*/
+/*div b:first-child{
+	background-color: transparent;
+}*/
+/*
+#a{
+	background: gray;
+	float:none;
+}
+#b{
+	background: maroon;
+	float:right;
+	clear:right;
+}
+#c{
+	background: navy;
+}
+*/
+/*
+table tr:first-child{
+	vvisibility: hidden; 
+	visibility: collapse; 
+}
+*/
+/*
+	text-align: justify;
+	text-shadow: 5px 5px 3px black;
+	text-indent:2%;
+
+	text-decoration: none;
+*/
+/*
+p{
+	
+}
+a{
+	
+}
+*/
+/*
+p{
+	color:red;
+	font-size:20px;
+	margin:0;
+	padding:0;
+	background:gray;
+}*/
+/*
+	颜色
+	color:#ff0000;
+	color:#f00;
+	color:rgb(0,128,128);(红，绿，蓝)
+	color:rgba(0,128,128,0.5);(红，绿，蓝,透明度0~1)
+	color:hsl(120,100%,30%);(色相，饱和度，透明度)
+	color:hsla(120,100%,30%,0.3);(色相，饱和度，透明度，透明度0~1)
+*/
+
+/*
+!important 强制优先级
+ */
+/*
+p{
+	color:red !important;
+	font-size: 20px !important;
+	font-weight: bold;
+}*/
+
+/*============通用选择器  不常用============*/
+/*
+ *{
+	border: 1px solid red;
+}
+*/
+/*============元素选择器============*/
+/*
+p{
+	color:red;
+}
+*/
+*
+/*============ID选择器 一个元素============*/
+/*
+#abc{
+	font-size: 20px;
+	color:green;
+}
+*/
+/*============类选择器 一个或多个元素============*/
+/*
+.abc{
+	color:blue;
+}
+*/
+/*类选择器的扩展用法*/
+/*
+span.abc{
+	color:orange;
+}
+*/
+/*
+.abc{
+	color:red;
+}
+.def{
+	font-size: 30px;
+}
+*/
+
+/*============属性选择器============*/
+/*
+[href]{
+	color:red;
+}
+[type="text"]{
+	color:blue;
+}
+[type="password"]{
+	border:1px solid red;
+}
+*/
+/*属性开头匹配*/
+/*[href^="http"]{
+	color:red;
+}*/
+/*属性结尾匹配*/
+/*[href$="cn"]{
+	color:orange;
+}*/
+/*属性包含指定字符匹配*/
+/*[href*="hao123"]{
+	font-size: 30px;
+}*/
+/*用于class多个值时候区分匹配*/
+/*[class~="def"]{
+	color:blue;
+}*/
+/*语言匹配*/
+/*[lang|="en"]{
+	color:red;
+}*/
+/*============复合选择器============*/
+/*p,b,i,span{
+	color:red;
+}*/
+/*#abc,.abc,i,span{
+	color: blue;
+}*/
+/*后代选择器 p和b之间还可以嵌套span等 一样有效果 不在乎b的层次深度*/
+/*p b{
+	color:red;
+}
+ul li{
+	border: 1px solid red;
+}
+*/
+/*子选择器 b只能是p的第一层*/
+/*p>b{
+	color:red;
+}
+ul>li{
+	border: 1px solid red;
+}
+*/
+/*相邻兄弟选择器 相邻的代码 只匹配之后*/
+/*p+b{
+	color: red;
+}*/
+/*普通兄弟选择器(css3独有) 无论隔了几行代码 只匹配之后*/
+/*p~b{
+	color: red;
+}*/
+/*========================伪元素选择器========================*/
+/*只有区块才有效果  例如p div...   span这种是没效果 */
+/*::first-line{
+	color:red;
+}*/
+/*只有在p的首行才有效果 其余类推*/
+/*p::first-line{
+	font-style:italic;
+}*/
+/*块级元素首行字幕*/
+/*::first-letter{
+	font-size: 30px;
+}*/
+/*文本前插入*/
+/*a::before{
+	content:'点击';
+}*/
+/*文本后插入*/
+/*a::after{
+	content:'搜索';
+}*/
+/*选定内容的时候  火狐没效果*/
+/*::selection{
+	color:red;
+}*/
+/*========================伪类选择器========================*/
+/*根元素选择器  不怎么使用*/
+/*:root{
+	border: 1px solid red;
+}*/
+/*//////////////////子元素选择器//////////////////*/
+/*选择第一个子元素*/
+/*ul > li:first-child{
+	color:red;
+}*/
+/*此时默认body为最初的元素  其下第一个元素就是子元素*/
+/*:first-child{
+	color:red;
+}*/
+/*伪类都需要加上前置选择器来限时范围*/
+/*选择最后一个子元素*/
+/*ul > li:last-child{
+	color:red;
+}*/
+/*选择只有一个子元素的那个子元素*/
+/*ul > li:only-child{
+	color:red;
+}*/
+/*选择只有一个指定类型的子元素的那个子元素*/
+/*div > p:only-of-type{
+	color:red;
+}*/
+/*nth-child(n)系列*/
+/*选择第n个元素*/
+/*ul > li:nth-child(2){
+	color:red;
+}*/
+/*选择倒数第n个元素*/
+/*ul > li:nth-last-child(2){
+	color:red;
+}*/
+/*选择特定子元素 div中顺数第n个p*/
+/*div > p:nth-of-type(2){
+	color:red;
+}*/
+/*选择特定子元素 div中倒数第n个p*/
+/*div > p:nth-last-of-type(1){
+	color:red;
+}*/
+/*//////////////////UI伪类选择器//////////////////*/
+/*选择启用状态的元素*/
+/*:enabled{
+	border:1px solid red;
+}*/
+/*选择禁用状态的元素*/
+/*:disabled{
+	border:1px solid blue;
+}*/
+/*选择勾选状态的input元素 此处被勾选的隐藏掉*/
+/*input:checked{
+	display: none;
+}*/
+/*选择默认状态的元素 例如:input被勾选即默认*/
+/*input:default{
+	display: none;
+}*/
+/*一对验证合法性的元素*/
+/*合法*/
+/*input:valid{
+	border: 1px solid green;
+}*/
+/*不合法*/
+/*input:invalid{
+	border: 1px solid red;
+}*/
+/*是否必填的元素*/
+/*必填*/
+/*input:required{
+	border: 1px solid red;
+}
+/*非必填*/
+/*input:optional{
+	border: 1px solid green;
+}*/
+/*//////////////////动态伪类选择器//////////////////*/
+/*访问前*/
+/*a:link{
+	color:red;
+}*/
+/*访问后*/
+/*a:visited{
+	color:blue;
+}*/
+/*鼠标悬停*/
+/*a:hover{
+	color: orange;
+}*/
+/*激活 鼠标点下去不松*/
+/*a:active{
+	color: green;
+}*/
+/*当获取光标时候*/
+/*input:focus{
+	border:1px solid red;
+}*/
+/*//////////////////其他伪类选择器//////////////////*/
+/*否定选择器 反选  此处除了含baidu以外的超链接设置为红色*/
+/*a:not([href*="baidu"]){
+	color:red;
+}*/
+/*匹配没有任何内容的元素*/
+/*p:empty{
+	display: none;
+}*/
+/*属性值前缀为en的元素 此处灵活运用 不一定en*/
+/*p:lang(en){
+	color:red;
+}*/
+/*定位到锚点时 选此元素 url最后加id的值 注意:#+id值*/
+/*b:target{
+	color:red;
+}*/
+/*======================== CSS表格与列表 ========================*/
+/*
+border-collapse:
+separate;
+collapse 间隙合并
+border-spacing 不能设置border-collapse为collapse 不然没效果
+empty-cells:
+hide 不显示空数据的单元格边框
+table-layout:
+auto 默认  边框随着数据长度拉伸
+fixed 不会随着数据长度变化而变化边框大小
+
+list-style-type:
+none 没有标记 就是没有点
+disc 实心圆
+circle 空心圆
+square 实心方块
+decimal 阿拉伯数字
+lower-roman 小写罗马数字
+upper-roman 大写罗马数字
+lower-alpha 小写英文字母
+upper-alpha 大写英文字母
+
+list-style-position:
+outside 默认
+inside 标记包含在内容一部分
+
+list-style-image:
+none 不使用图像
+url  通过url使用图像 用图片作为标记
+
+list-style:简写
+顺序:
+list-style-type
+list-style-position
+list-style-image
+
+vertical-align 垂直对齐
+baseline 内容对象与基线对齐
+top    内容对象与顶端对齐
+middle 内容对象与中部对齐
+bottom 内容对象与底部对齐
+
+vertical-align:  针对上下标才有作用
+sub   垂直对齐文本的下标
+super 垂直对齐文本的上标
+*/
+
+/*table{*/
+	/*
+	width:400px;
+	height:300px;
+	text-align:center;
+	*/
+	/*border-collapse:collapse;*/
+	/*border-spacing: 10px;*/
+
+	/*caption-side:bottom;*/
+	/*empty-cells:hide;*/
+	/*table-layout: fixed;*/
+	/*border: 1px solid red;*/
+/*}*/
+/*
+table tr th,table tr td{
+	border: 1px solid blue;
+}
+*/
+/*ul{*/
+	/*width:120px;*/
+/*	list-style-type: square;
+	list-style-position: inside;
+	list-style-image: url(htmlpic/pic1.png);*/
+	/*list-style:square inside url(htmlpic/pic1.png);*/
+/*}*/
+/*
+.sex{
+	vertical-align: middle;
+}
+b{
+	vertical-align: sub;
+}
+div{
+	width:300px;
+	height:300px;
+	background: silver;
+	text-align: center;
+}
+*/
+/*vertical-align负值往下 正值往上*/
+/*
+div span{
+	background: green;
+	vertical-align: -150px;
+}
+em{
+	vertical-align: 40px;
+}
+*/
+/*======================== 其他样式 ========================*/
+/*
+opacity 透明度 0~1
+box-shadow:
+hoffset 阴影的水平偏移量 是一个长度值 正值表示阴影向右偏移 负值表示阴影向左偏移
+voffset 阴影的垂直偏移量 是一个长度值 正值代表阴影位于元素盒子的下方 负值代表阴影位于元素盒子上方
+blur (可选)指定模糊值 是一个长度值 值越大盒子的边缘越模糊 默认0 边界清晰
+spread (可选)指定阴影延伸半径 是一个长度值 正值代表阴影向盒子各个方向延伸扩大 负值代表阴影沿相反方向缩小
+color (可选)设置阴影的颜色 如果省略 浏览器会自行选择一个颜色
+inset (可选)将外部阴影设置为内部阴影
+
+outline:简写 宽度 样式 颜色 
+outline-color   颜色
+outline-offset  长度
+outline-style   样式
+outline-width   长度
+
+cursor:光标型
+
+*/
+/*div{*/
+	/*
+	width:200px;
+	height:200px;
+	*/
+	/*
+	background-color: green;
+	color:blue;
+	opacity: 0.5;
+	*/
+	/*border: 10px solid silver;*/
+	/*box-shadow: 1px 10px 10px 3px red;*/
+
+	/*outline: 5px double red;*/
+	/*cursor:move;*/
+/*}*/
+/*======================== rem ========================*/
+/*
+html默认数字大小是16px 为了方便计算设置为10px 用10/16=62.5 按百分比更容易布局
+
+*/
+/*
+html{
+	font-size: 62.5%;
+}
+h1{
+	font-size: 3em;
+}
+p{
+	font-size: 1.4em;
+}
+*/
+/*
+code{
+	font-size: 1.1em;这里是15px 因为em是和父元素挂钩 所以是14px的1.1倍 就是15px左右
+}
+code {
+	font-size: 0.786em; 这里11px  但计算太复杂
+}
+*/
+/*此处直接跟根html挂钩 根10px 11px就是 11/10=1.1rem*/
+/*
+code{
+	font-size: 1.1rem;
+}
+div{
+	width:200px;
+	height:200px;
+	background-color: silver;
+}
+*/
+/*======================== 文本效果 ========================*/
+/*text-shadow:10px 10px 10px red;
+	text-shadow:0px 0px 0px rgb(188,178,188),
+				1px 1px 1px rgb(173,163,173),
+				2px 2px 2px rgb(157,147,157);
+
+width:160px;
+background-color: silver;
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis; 用...省略多出部分
+
+*/
+/*
+p{
+	font-size: 160px;
+	font-family: 黑体;
+	background: -webkit-linear-gradient(top,#eee,#aaa,50%,#333,51%,#000);
+	-webkit-background-clip:text;
+	-webkit-text-fill-color:transparent;
+}
+*/
+/*======================== 变形效果(上) ========================*/
+/*
+transform: 变换;
+平移
+translate(x,y)
+translateX()
+translateY()
+缩放
+scale(1.5)
+scale(1.5,2)
+scaleX()
+scaleY()
+旋转0~360 负值均可
+rotate(-45deg)
+倾斜0~360 负值均可
+skew(45deg,20deg)
+skewX()
+skewY()
+指定矩形 参数公式复杂 不详讲
+matrix(1,0,0,1,30,30)
+*/
+/*
+body{
+	margin:100px;
+}
+div{
+	width:200px;
+	height:200px;
+	background-color: green;
+	box-shadow: 2px 2px 2px gray;
+
+	transform: matrix(1,0,0,1,30,30);
+}
+*/
+/*======================== 变形效果(下) ========================*/
+/*
+perspective 
+none 默认值 表示无限的角度来看3D物体 但看上去是平的
+长度值 接受一个长度单位大于0的值 其单位不能为百分比。值越大，角度出现的越远。就好像比你人离远一点看物体。值越小，相反
+ (可以理解成摄像机观察距离)
+ translate3d(x,y,z)  transform:translate3d(100px,100px,500px);
+ translateZ()单独设置
+ scale3d(x,y,z) 单独设置无效 需要配合角度 例如:transform:scale3d(1,1,1.5) rotate(45deg);;
+ */
+/*
+body{
+	margin:100px;
+}
+#a{
+	perspective:2000px;
+	transform-style: preserve-3d;
+}
+img{
+	transform:scale3d(1,1,1.5) rotateX(45deg);
+}
+*/
+/*======================== CSS3过度效果 ========================*/
+/*
+transition 过度
+transition-property:
+none 没有指定任何样式
+all  指定元素所支持transition-property的属性样式
+指定样式 例如:transition-property: background-color,color,margin-left;
+transition-duration 过度时间
+transition-timing-function:持续动画类型 通过控制贝塞尔曲线参数来实现效果
+ease 默认 快到慢
+linear 匀速
+ease-out 减速状态
+ease-in 加速状态
+ease-in-out 先加速再减速
+cubic-bezier(p1,p2,p3,p4) 0~1之间 自定义效果
+steps(n,type) 跳跃式过度 第一个值表示跳跃几次 第二个是start或end 表示开始时候跳跃还是结束时跳跃
+transition-delay: 延迟过度时间(可以设置一个值) 也可以和transition-property一一对应 例如:与上面的例如一样 transition-property:0s,1s,2s 
+transition: 简写 两种方式
+单独声明
+例如:transition: background-color 1s ease 0s,color 1s ease 0s,margin-left 1s ease 0s;
+统一
+例如:transition: all 1s ease 0s;
+ */
+/*
+body{
+	margin:100px;
+}
+div{
+	width:200px;
+	height:200px;
+	border:1px solid green;
+	background-color:white;
+	transition:all 1s ease-in 0s;
+}
+div:hover{
+	background-color: black;
+	color:white;
+	margin-left:100px;
+}
+*/
+/*======================== CSS3动画效果 ========================*/
+/*
+animation-name 绑定动画名
+animation-duration 动画时间
+animation-timing-function 运行方式 参考过度transition参数
+ease 默认 快到慢
+linear 匀速
+ease-out 减速状态
+ease-in 加速状态
+ease-in-out 先加速再减速
+cubic-bezier(p1,p2,p3,p4) 0~1之间 自定义效果
+...
+
+animation-delay 延迟
+animation-iteration-count 循环次数
+infinite 无限次
+animation-iteration-count:infinite;
+
+animation-direction: 方向
+alternate 交替 比如设置了ease:快到慢 慢到快 快到慢...;
+
+animation-play-state 播放状态 一般用于动态设置
+paused 暂停
+
+animation-fill-mode 设置结束后不返回
+forwards 动画结束后继续最后关键帧位置 不返回
+ backforwards 动画结束后迅速应用起始关键帧位置 返回
+ both 按照情况返回forwards或者backforwards  此参数跟循环次数有关
+
+ animation 简写
+ 以下是顺序
+ animation-name
+ animation-duration
+ animation-timing-function
+ animation-iteration-count 
+ animation-direction
+ animation-delay
+ animation-fill-mode
+ 例如:animation: myani 1s ease 2 alternate 1s both;
+
+ */
+/*
+body{
+	margin:100px;
+}
+div{
+	width:200px;
+	height:200px;
+	border:1px solid green;
+	background-color:white;
+
+	animation: myani 1s ease 2 alternate 1s both;
+
+}
+*/
+/*
+0%  起始位置
+100 终止位置
+0%,100%{
+		background-color:white;
+		margin-left:0px;
+	}
+	50%{
+		background-color:black;
+		margin-left:100px;
+	}
+form  起始位置
+to    终止位置
+form{
+		background-color:white;
+		margin-left:0px;
+	}
+	to{
+		background-color:black;
+		margin-left:100px;
+	}
+ */
+/*
+@keyframes myani{
+	form{
+		background-color:white;
+		margin-left:0px;
+	}
+	to{
+		background-color:black;
+		margin-left:100px;
+	}
+}
+*/
+/*======================== CSS3传统布局(上)  ========================*/
+
+/*
+固定布局 table的width设置为960
+流体布局 table的width设置为100%
+ */
+/*
+body{
+	margin: 0px;
+}
+table{
+	width:100%;
+	margin: 0 auto;
+	border-collapse:collapse;
+}
+.header{
+	height:120px;
+	background-color:olive; 
+}
+.aside{
+	width:200px;
+	height:500px;
+	background-color: purple;
+}
+.section{
+	width:760px;
+	background-color: maroon;
+}
+.footer{
+	height:120px;
+	background-color: gray;
+}
+*/
+/*
+浮动布局 只适用于PC端 width 960 200 760
+浮动流体布局 把width改100% 20% 80%
+ */
+/*
+body{
+	margin: 0px auto;
+	width:auto;
+}
+header{
+	height:120px;
+	background-color:olive; 
+}
+aside{
+	width:20%;
+	height:500px;
+	background-color: purple;
+	float:left;
+}
+section{
+	width:80%;
+	height:500px;
+	background-color: maroon;
+	float:right;
+}
+footer{
+	height:120px;
+	background-color: gray;
+	clear:both;
+}
+*/
+/*======================== CSS3传统布局(下)  ========================*/
+/*
+position 绝对定位和相对定位
+static 默认值 无定位
+absolute 绝对定位 脱离文档流  相当于浮在空中  以窗口文档左上角为0,0起点 使用top right bottom left
+relative 相对定位 不脱离文档流 基于标签 使用top right bottom left 
+fixed 以窗口参考定位 使用top right bottom left (拖滚动条查看区别 此参数把位置固定在那)
+z-index 层次深度
+
+小技巧:
+body设置relative
+其余标签设置absolute
+可以实现标签内部的绝对定位
+ */
+/*
+body{
+	margin: 100px;
+	height:800px;
+	border:1px solid red;
+	position: relative;
+}
+header{
+	width:100px;
+	height:100px;
+	background-color:olive; 
+	position: absolute;
+	top:0;
+	left:0;
+}
+aside{
+	width:100px;
+	height:100px;
+	background-color:green; 
+	position: absolute;
+	top:0;
+	left:0;
+}
+*/
+/*定位布局 定位流体布局直接把宽高改百分比*/
+/*
+body{
+	width:960px;
+	margin:0 auto;
+	position: relative;
+}
+header{
+	width:960px;
+	height:120px;
+	background-color: olive;
+	position:absolute;
+	top:0;
+	left:0;
+}
+aside{
+	width:200px;
+	height:500px;
+	background-color: purple;
+	position:absolute;
+	top:120px;
+	left:0;
+}
+section{
+	width:760px;
+	height:500px;
+	background-color: maroon;
+	position:absolute;
+	top:120px;
+	right:0;
+}
+footer{
+	width:960px;
+	height:120px;
+	background-color: gray;
+	position:absolute;
+	top:620px;
+	left:0;
+}
+*/
+/*浮动布局*/
+/*
+box-sizing 盒子大小匹配
+content-box 默认值 border和padding设置后用于元素的总长度
+border-box border和padding设置后不用于元素总长度 width自动根据内边距和边框距自由计算
+resize 更改元素尺寸大小 
+一般普通元素默认值是不允许 但如果是表单类的textarea元素 默认是允许的
+而普通元素需要设置overflow:auto 配合resize才会出现可拖拽的图形;
+{
+	none 默认值 不允许用户调整元素大小
+	both 用户可以调节元素的宽度和高度
+	horizontal 用户可以调节元素的宽度
+	vertical  用户可以调节元素的高度
+}
+ */
+/*
+body{
+	width:960px;
+	margin:0 auto;
+}
+header{
+	width:960px;
+	height:120px;
+	background-color: olive;
+	overflow:auto;
+	resize:vertical;
+}
+aside{
+	width:200px;
+	height:500px;
+	background-color: purple;
+	border:5px solid green;
+	padding:10px;
+	box-sizing:border-box;
+	float:left;
+
+}
+section{
+	width:760px;
+	height:500px;
+	background-color: maroon;
+	float:left;
+}
+footer{
+	width:960px;
+	height:120px;
+	background-color: gray;
+	clear:both;
+}
+textarea{
+	resize:none;
+}
+*/
+/*======================== CSS3多列布局  ========================*/
+/*
+columns 需要前缀-moz-火狐 -webkit-谷歌
+第一个参数
+auto自适应浏览器宽高
+填像素 就会大于此像素则排版  否则按段输出
+第二个参数 列
+例:-moz-columns: 200px 3;
+如果没有设置列数 却设置了每列多少宽度 那么就会自动设置列数
+columns-width 第一个参数 column-width: 200px;
+columns-count 第二个参数 column-count: 3;
+column-gap间隙
+column-rule 密度 类型(dashed 虚线) 颜色
+
+column-span 设置跨列大标题 火狐未支持
+*/
+/*
+div{
+	-moz-columns: 200px 3;
+	-moz-column-gap:100px;
+	-moz-column-rule:1px dashed gray;
+
+	-webkit-columns: 200px 3;
+	-webkit-column-gap:100px;
+	-webkit-column-rule:1px dashed gray;
+
+	columns: 200px 3;
+	column-gap:100px;
+	column-rule:1px dashed gray;
+}
+h1{
+	text-align:center;
+	-moz-column-span:all;
+	-webkit-column-span:all;
+	column-span:all;
+}
+*/
+/*======================== CSS3弹性伸缩布局(上)  ========================*/
+/*
+box-orient 盒子流动方向
+vertical 从上到下垂直流动
+horizontal 从左到右水平排列
+inline-axis 沿着内联排列显示
+block-axis 沿着块轴排列显示
+
+box-direction 流动顺序
+normal 默认值 正常顺序
+reverse 逆序
+
+box-pack 分布方式 注意设置width为100%
+start 以起始点靠齐
+end 以结束点靠齐
+center 以中心点靠齐
+justify 平均分布 -webkit-支持 -moz-不支持
+
+box-align 额外空间
+start 以顶部为基准 清理下部额外空间
+end  以底部为基准 清理上部额外空间
+center 以中部为基准 清理上下额外空间
+baseline 以基线为基准 清理额外的空间 基线默认开头
+stretch 填充整个容器 默认
+
+box-flex 使用浮点数分配项目的比例
+表示每个子区块占用浏览器多大的比例
+所设置的点数之和/100求出每一个点数的百分比
+
+box-ordinal-group 设置显示位置 
+表示区块的位置如下
+ */
+p{
+	width:150px;
+	border:1px solid gray;
+	background-color: silver;
+	margin:5px;
+	padding:5px;
+
+	
+}
+p:nth-child(1){
+	-moz-box-flex:1;
+	-webkit-box-flex:1;
+
+	-moz-box-ordinal-group:3;
+	-webkit-box-ordinal-group:3;
+}
+p:nth-child(2){
+	-moz-box-flex:3;
+	-webkit-box-flex:3;
+
+	-moz-box-ordinal-group:2;
+	-webkit-box-ordinal-group:2;
+}
+p:nth-child(3){
+	-moz-box-flex:1;
+	-webkit-box-flex:1;
+
+	-moz-box-ordinal-group:1;
+	-webkit-box-ordinal-group:1;
+}
+div{
+	width:100%;
+	background-color: red;
+	display: -moz-inline-box;
+	display: -webkit-inline-box;
+	display: box;
+}

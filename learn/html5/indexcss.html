@@ -1,0 +1,322 @@
+ <!DOCTYPE html>
+<html lang="zh-cn">
+<head>	
+	<meta charset="utf-8"> 
+	<title>CSS样式</title>	
+	
+ 	<!-- 外部应用样式 引用自定义的style.css-->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- <link rel="stylesheet" type="text/css" href="import.css"> -->
+
+ 	<!-- 文档内嵌样式 -->
+	<!-- <style type="text/css">-->
+	<!-- 	
+	p{
+		color:blue;
+		font-size:40px;
+		font-style: italic;
+	}
+	 -->
+	
+	<!-- 样式继承 -->
+	<!-- 
+	p{
+		color: red;
+		border:1px solid blue;
+	}
+	b{
+		border:inherit;
+	}
+ 	-->
+	<!-- </style> -->
+	
+</head>	
+<body>	
+<!-- ======================= CSS入门 ======================= -->
+<!-- 元素内嵌样式 -->
+<!-- <p style="color:red;font-size:50px;">元素内嵌样式</p> -->
+
+<!-- 文档内嵌样式 在head定义style-->
+<!-- <p>文档内嵌样式</p> -->
+
+<!-- 外部应用样式 -->
+<!-- <p>外部应用样式</p> -->
+
+<!-- 一般link用的比import多 link性能比import好一点 -->
+<!-- <p>import<b>导入</b></p> -->
+
+<!-- 浏览器样式 -->
+<!-- 
+<b>b元素本身隐含加粗样式</b>
+<span style="font-weight:bold;">span元素没有隐含，但可以设置它加粗</span>
+<b style="font-weight:normal;">去除b元素隐含样式</b>
+ -->
+
+<!-- 样式层叠 -->
+<!-- 
+以下优先级从低到高
+浏览器样式(元素自身携带样式)<外部应用(<link>)==文档内嵌样式(<style>)<元素内嵌样式(style属性设置)
+外部应用与文档内嵌样式优先级取决于代码的位置先后
+-->
+<!-- <p style="font-size:50px;color:orange;">我要叠加三种定义的方式</p> -->
+
+<!-- 样式继承 -->
+<!-- 
+只适用于 文字 颜色 字体等
+而元素在页面上的布局样式则不会被继承。
+如果继承这种样式，就必须使用强制继承:inherit
+-->
+<!-- <p>样式<b>继承</b></p> -->
+
+<!-- ======================= CSS选择器(上) ======================= -->
+<!-- 
+<p class="abc">这是<b>一个</b><span><b>段落</b></span></p>
+<b>相邻兄弟选择器</b>
+<b id="abc">这是一个加粗</b>
+<span class="abc def">这什么都没有</span>
+
+<i lang="en-us">HTML5</i>
+
+<a href="http://www.baidu.com">百度</a>
+<a href="javascript:void(0)">好搜</a>
+<a href="http://www.360.cn">360官网</a>
+<a href="http://www.hao123.com">好123</a>
+
+<input type="text">
+<input type="password">
+
+<ul>
+	<li>我是儿子
+		<ol>
+			<li>我是孙子</li>
+			<li>我是孙子</li>
+		</ol>
+	</li>
+	<li>我是儿子</li>
+	<li>我是儿子</li>
+</ul>>
+-->
+<!-- 此处开始测试伪元素选择器 -->
+<!-- 
+<p>p伪元素选择器伪元素选择器伪元素选择器伪元素选择器伪元素选择器伪元素选择器伪元素选择器</p>
+<span>span伪元素选择器伪元素选择器伪元素选择器伪元素选择器伪元素选择器伪元素选择器伪元素选择器</span>
+<div>div伪元素选择器伪元素选择器伪元素选择器伪元素选择器伪元素选择器伪元素选择器伪元素选择器</p>
+ -->
+
+<!-- <a href="http://www.baidu.com">百度</a> -->
+
+
+<!-- ======================= CSS选择器(下) ======================= -->
+<!-- 
+<ul>
+	<li>我是儿子</li>
+	<li>我是儿子</li>
+	<li>我是儿子</li>
+	<li>我是儿子</li>
+	<li>我是儿子</li>
+</ul>
+
+<ul>
+	<li>only-child</li>
+</ul>
+
+<div>
+	<p>div > p:only-of-type</p>
+	<span>div > span:only-of-type</span>
+</div>
+
+<div>
+	<p>div > p:only-of-type</p>
+	<p>div > p:only-of-type</p>
+</div>
+
+<form action="">
+	<input type="text" disabled>
+	<input type="text">
+
+	<input type="checkbox">
+	<input type="checkbox" checked>
+
+	<input type="text" required>
+	<input type="email" required>
+	<input type="text">
+
+	<button>提交</button>
+</form>
+
+<a href="http://www.baidu.com">百度</a>
+<a href="http://www.google.com">谷歌</a>
+<a href="http://www.hao123.com">好123</a>
+
+<b>加粗</b>
+<p lang="en-us">HTML5</p>
+<b id="mytarget">加粗</b>
+ -->
+ <!-- ======================= CSS文本样式 ======================= -->
+ <!-- <p>html5 HTML5 html5 HTML5 html5 HTML5 html5 HTML5 html5 HTML5 html5 HTML5 html5 HTML5</p> -->
+ <!-- 此处设置a样式后 让本身自带的下划线去掉了 -->
+ <!-- <a href="">百度</a> -->
+ <!-- ======================= CSS盒模型(上) ======================= -->
+<!-- <div>我是HTML5 我是HTML5 我是HTML5 我是HTML5 我是HTML5 我是HTML5 我是HTML5 我是HTML5 我是HTML5 我是HTML5 我是HTML5 我是HTML5 我是HTML5 我是HTML5 我是HTML5 我是HTML5 我是HTML5 我是HTML5 我是HTML5 我是HTML5 我是HTML5 我是HTML5 我是HTML5 我是HTML5 我是HTML5 我是HTML5 我是HTML5 我是HTML5 我是HTML5 </div> -->
+ <!-- ======================= CSS盒模型(下) ======================= -->
+ <!-- <div>我是HTML5</div>
+ dasdsdas
+ <table border="1">
+ 	<tr>
+ 		<td>1</td>
+ 		<td>2</td>
+ 		<td>3</td>
+ 	</tr>
+ 	<tr>
+ 		<td>4</td>
+ 		<td>5</td>
+ 		<td>6</td>
+ 	</tr>
+ </table> -->
+ <!-- <div>我是块元素</div> -->
+ <!-- <span>我是行内元素</span> -->
+<!-- <img src="htmlpic/pic1.png"> -->
+<!-- <div>我是块元素 将要转换为行内元素</div> -->
+<!-- <span>我是行内元素 将要转换为块元素</span> -->
+<!-- <div>我是块元素 将要转换为行内块元素</div>
+<span>我是行内元素 将要转换为行内块元素</span> -->
+<!-- <div id="a">我是a</div>
+<div id="b">我是b</div>
+<div id="c">我是c</div> -->
+ <!-- ======================= CSS边框与背景(上) ======================= -->
+<!-- <div>我是HTML5</div> -->
+ <!-- ======================= CSS边框与背景(下) ======================= -->
+<!-- <div>我是<b>HTML5</b> 我是<b>HTML5</b> 我是<b>HTML5</b></div> -->
+<!-- <div>我是<b>HTML5</b> 我是<b>HTML5</b> 我是<b>HTML5</b></div>
+<div>我是<b>HTML5</b> 我是<b>HTML5</b> 我是<b>HTML5</b></div>
+<div>我是<b>HTML5</b> 我是<b>HTML5</b> 我是<b>HTML5</b></div> -->
+
+ <!-- ======================= CSS表格与列表 ======================= -->
+<!-- 
+<table border="1">
+	<caption>人员档案</caption>
+	<tr>
+		<th>姓名</th>
+		<th>性别</th>
+		<th>年龄</th>
+	</tr>
+	<tr>
+		<td>张三</td>
+		<td class="sex">男</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>李四</td>
+		<td>女</td>
+		<td>28</td>
+	</tr>
+	<tr>
+		<td>王五</td>
+		<td>男</td>
+		<td>30</td>
+	</tr>
+
+</table>
+
+<ul>
+	<li>张三 张三张三张三张三张三</li>
+	<li>李四</li>
+	<li>王五<b>2</b></li>
+	<li>马六</li>
+</ul>
+
+<div><span>我是HTML5</span></div>
+
+<em>内容简介:</em> <textarea></textarea>
+ -->
+ <!-- ======================= 其他样式 ======================= -->
+<!-- <div>我是HTML5</div> -->
+ <!-- ======================= rem ======================= -->
+<!-- <h1>我是h1</h1>
+<div>我是div 我是<code>code</code></div>
+ -->
+ <!-- ======================= 文本效果 ======================= -->
+<!-- <p>我是HTML5</p> -->
+ <!-- ======================= 变形效果 ======================= -->
+ <!-- 
+<div id="a">
+	<img src="htmlpic/pic1.png">
+</div>
+111
+ -->
+<!-- ======================= CSS3过度效果和CSS3动画效果 ======================= -->
+<!-- <div>我是HTML5</div> -->
+<!-- ======================= CSS3传统布局(上) ======================= -->
+<!-- 固定布局和流体布局 -->
+<!-- 
+<table border="0">
+	<tr>
+		<td colspan="2" class="header">header</td>	
+	</tr>
+	<tr>
+		<td class="aside">aside</td>
+		<td class="section">section</td>	
+	</tr>
+	<tr>
+		<td colspan="2" class="footer">footer</td>
+	</tr>
+
+</table>
+ -->
+ <!-- 浮动布局 -->
+ <!-- 
+ <header>
+ 	header
+ </header>
+ <aside>
+ 	aside
+ </aside>
+ <section>
+ 	section
+ </section>
+ <footer>
+ 	footer
+ </footer>
+ -->
+ <!-- ======================= CSS3传统布局(下) ======================= -->
+ <!-- 
+ <header>
+ 	header
+ </header>
+ <aside>
+ 	aside
+ </aside>
+  <section>
+ 	section
+ 	<textarea ></textarea>
+ </section>
+ <footer>
+ 	footer
+ </footer>
+111
+ -->
+<!-- ======================= CSS3多列布局 ======================= -->
+<!-- 
+<div>
+<h1>标题</h1>
+<h3>第一段</h3>
+<p>大年二十八（2月6日）那天，冯绍峰与林允乘车出门，两人一路来到了税务所。当天，冯绍峰的爸爸在税务所一直等候，似乎这是三人的共同见面</p>
+<h3>第二段</h3>
+<p>随后，当冯绍峰载着林允离开了税务所后，摄影师竟看见他们车中缠绵，卧膝长谈。后来二人还一同前去服装店，冯绍峰为林允挑选了衣物。</p>
+<h3>第三段</h3>
+<p>买完衣服后，二人中却突然多了一位男子，或许冯绍峰是想让林允更多的认识自己的朋友，来融入自己的生活。众人上车后便接着来到一家饭店内，冯绍峰带着林允与两位好友一起吃饭。饭局结束后，两人也共同回家。</p>
+<h3>第四段</h3>
+<p>早前，林允在大年二十九这一天晒出一组自称在家中温馨做年夜饭的照片，根据照片背景，网友指出正是在冯绍峰家中，二人恋情传闻也随之产生。从这些照片和行踪来看，林允放弃了回老家团聚的机会而是选择在冯绍峰家中过年，二人的恋情也终于板上钉钉。</p>
+<h3>第五段</h3>
+<p>2月16日下午，刘亦菲在微博上po出自拍美照，照片中的她站在结冰的湖面之前，只见她笑容满面，心情大好！阳光映照之下更显皮肤细腻白皙，唇红齿白，仙气十足！她自己也写到：“久违的休息日，希望时间过慢一点，出来买杯咖啡，回家看书咯~”</p>
+</div>
+ -->
+<!-- ======================= CSS3弹性伸缩布局(上) ======================= -->
+<div>
+	<p>2016年初，Supercell对外公布了手游新作《部落冲突:皇室战争》（Clash Royale），并在部分国家和地区发行测试。今天，Supercell正式宣布，《部落冲突:皇室战争》将于三月iOS全球上线！届时玩家即可通过App Store下载并体验这一即时卡</p>
+	<p>《部落冲突:皇室战争》是由风靡全球的手游《部落冲突》（Clash of Clans）主创成员打造的又一力作，是一款和《部落冲突》具有相同世界观的即时卡牌对战游戏。在这里， 您可以收集并升级几十种你所熟知和喜爱的部落军队、法术以及防御建筑卡牌，还有</p>
+	<p>同样令人喜爱的皇室家族人物：王子，骑士，飞龙宝宝等等。《部落冲突:皇室战争》将为您带来前所未有的实时卡牌对战体验，在它简单易上手的规则中蕴含着难以计量的深度策略等待您发掘，分秒必争的战局将给您带来源源不绝的刺激体验。</p>
+</div>
+
+</body>
+</html>	

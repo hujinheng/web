@@ -1,0 +1,776 @@
+ <!DOCTYPE html>    	   						<!-- 文档类型声明 -->
+<html lang="zh-cn"><!--en是英文效果--> 			<!--表示HTML文档开始-->
+<head>					   						<!--包含文档元数据开始-->
+	<meta charset="utf-8"> 						<!--声明字符编码-->
+	<title>基本格式</title>						<!--设置文档标题-->
+</head>					   						<!--包含文档元数据结束-->
+<body>					   						<!--表示HTML内容开始-->
+	
+
+<!-- ======================= 标签范例效果 ======================= -->
+
+<!-- 
+b元素:这是<b>HTML5</b>教程<br>
+strong元素:这是<strong元素>HTML5</strong元素>教程<br>
+wbr元素:这是HTML5HTML5<wbr>HTML5HTML5HTML5<wbr>HTML5HTML5HTML5HTML5HTML5教程<br>
+i元素:这是<i>HTML5</i>教程<br>
+em元素:这是<em>HTML5</em>教程<br>
+s元素:这是<s>HTML5</s>教程<br>
+del元素:这是<del>HTML5</del>教程<br>
+u元素:这是<u>HTML5</u>教程<br>
+ins元素:这是<ins>HTML5</ins>教程<br>
+small元素:这是<small>HTML5</small>教程<br>
+sub元素:这是HTML<sub>5</sub>教程<br>
+sup元素:这是HTML<sup>5</sup>教程<br> 
+-->
+<!-- 以下只有在英文效果(lang="en")有效 -->
+<!-- 
+code元素:这是<code>HTML5</code>教程<br>
+var元素:这是<var>HTML5</var>教程<br>
+samp元素:这是<samp>HTML5</samp>教程<br>
+kdb元素:这是<kdb>HTML5</kdb>教程<br>
+ -->
+<!-- abbr元素:这是<abbr>HTML5</abbr>教程<br>-->						<!-- 对文本进行CSS调整 -->
+<!-- dfn元素:这是<dfn>HTML5</dfn>教程<br>-->	
+<!-- q元素:这是<q>HTML5</q>教程<br>-->	
+<!-- cite元素:这是<cite>HTML5</cite>教程<br>-->	
+<!-- ruby元素:这是<ruby style="font-size:50px;">
+				饕<rp>(</rp><rt>tāo</rt><rp>)</rp>
+				餮<rp>(</rp><rt>tiè</rt><rp>)</rp>
+		</ruby><br> -->
+<!--bdo元素:这是<bdo dir="rtl">HTML5</bdo>教程<br>--> 		<!-- 文字方向 rtl右到左  ltr左到右(默认)-->
+<!-- mark元素:这是<mark>HTML5</mark>教程<br> -->					<!-- 黄色的背景黑色的字 -->
+<!-- time元素:这是<time>2016-1-7</time><br>-->
+<!-- span元素:这是<span>HTML5</span>教程<br>	-->					<!-- 对文本进行CSS调整 -->
+
+<!-- 以上标签大多是语义的意思或者给css用  不一定全都有效果 -->
+
+
+<!-- ======================= 一个超链接元素(标签) ======================= -->
+<!-- target是类型 _blank:新标签中打开 -->
+<!-- href 支持相对目录结构 ./(是当前目录 也可以不写) ../(上一层)  xxx/xxx/ 等等 -->
+<!-- <a href="https://www.baidu.com" target="_blank">百度</a><br>	 -->
+
+<!-- 锚点 -->
+<!-- name 和 id 都可以 -->
+<!-- 
+<a href="#1">第一章</a>
+<a href="#2">第二章</a>
+<a href="#3">第三章</a> 
+
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+
+<a name="1"><br><br>第一章内容
+
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+
+<a name="2"><br><br>第二章内容
+
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+
+<a id="3"><br><br>第三章内容
+
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+ -->
+
+<!-- ======================= 分组元素 =======================  -->
+
+<!-- p空隙大 -->
+<!-- 
+<p>这是一个段落</p>
+<p>这是另一个段落</p>
+ -->
+
+<!-- div的空隙跟br换行一样的效果 -->
+<!-- 
+<div>这是一个通用分组</div>
+<div>这是另一个通用分组</div>
+ -->
+
+<!-- blockquote引用大段内容 -->
+<!-- 
+<blockquote>这是一个引用大段内容</blockquote>
+<blockquote>这是另一个引用大段内容</blockquote>
+ -->
+
+<!-- pre理解空隙和换行 只能理解大概样子 -->
+<!-- 
+<pre>
+	####
+		####
+			####
+		####
+	####
+</pre>
+ -->
+
+<!-- 添加分割 -->
+<!-- 
+添加分割:<br>
+<hr>
+ -->
+
+<!-- ul元素无序列表 -->
+<!-- li元素是内部列表项-->
+<!-- 
+无序列表<br>
+<ul>
+	<li>张三</li>
+	<li>李四</li>
+	<li>王五</li>
+	<li>马六</li>
+</ul>
+ -->
+
+<!-- ol有序列表 -->
+<!-- li列表项 同上 -->
+<!-- 有序列表<br> -->
+<!-- 
+start 从第几个序列开始统计
+reversed 倒序 一半的主流浏览器不支持
+type 编号类型:1 a A i I
+ -->
+ <!-- 
+start<br>
+<ol start="2">
+	<li>张三</li>
+	<li>李四</li>
+	<li>王五</li>
+	<li>马六</li>
+</ol>
+reversed<br>
+<ol reversed>
+	<li>张三</li>
+	<li>李四</li>
+	<li>王五</li>
+	<li>马六</li>
+</ol>
+type<br>
+<ol type="a">
+	<li>张三</li>
+	<li>李四</li>
+	<li>王五</li>
+	<li>马六</li>
+</ol>
+ -->
+<!-- li的属性value -->
+<!-- 
+li<br>
+<ol>
+	<li>张三</li>
+	<li>李四</li>
+	<li value="5">王五</li>
+	<li>马六</li>
+</ol>
+
+<hr>
+说明列表<br>
+<dl>
+	<dt>这是第一份文件</dt>
+	<dd>这是第一份文件的详细内容1</dd>
+	<dd>这是第一份文件的详细内容2</dd>
+
+	<dt>这是第二份文件</dt>
+	<dd>这是第二份文件的详细内容1</dd>
+	<dd>这是第二份文件的详细内容2</dd>
+</dl>
+
+<hr>
+使用插图
+<figure>
+	<figcaption>这是一张图</figcaption>
+	<img src="htmlpic//pic1.png">
+</figure>
+ -->
+
+<!--======================= 表格元素 =======================-->
+<!-- 注意:以下style在html5里面已经被废弃 但仍然兼容 方便展示所以列出-->
+
+<!-- 构建基础表格 -->
+<!--
+table  表格
+border 边框距离
+tr     行
+td     列 
+ -->
+ <!-- 
+ 基础表格<br>
+<table border="1">
+	<tr>
+		<td>张三</td>
+		<td>男</td>
+		<td>未婚</td>
+	</tr>
+	<tr>
+		<td>李四</td>
+		<td>女</td>
+		<td>已婚</td>
+	</tr>
+</table>
+
+<br>标题单元格<br>
+<table border="1" style="width:300px;">
+	<tr>
+		<th>姓名</th>
+		<th>性别</th>
+		<th>婚姻</th>
+	</tr>
+	<tr>
+		<td>张三</td>
+		<td>男</td>
+		<td>未婚</td>
+	</tr>
+	<tr>
+		<td>李四</td>
+		<td>女</td>
+		<td>已婚</td>
+	</tr>
+</table>
+ -->
+
+<!-- <br>合并单元格<br> -->
+<!-- 
+colspan 合并列数据
+rowspan 合并行数据
+ -->
+ <!-- 
+<table border="1" style="width:300px;">
+	<tr>
+		<th rowspan="4">基本情况</th>
+		<th>姓名</th>
+		<th>性别</th>
+		<th>婚姻</th>
+	</tr>
+	<tr>
+		<td>张三</td>
+		<td>男</td>
+		<td>未婚</td>
+	</tr>
+	<tr>
+		<td>李四</td>
+		<td>女</td>
+		<td>已婚</td>
+	</tr>
+	<tr>
+		<td colspan="3">统计:共两人</td>
+	</tr>
+</table>
+ -->
+
+<!-- <br>添加表头 表脚 表内容 表标题<br> -->
+<!-- 
+不关心代码顺序
+tfoot 表脚
+thead 表头
+tbody 表内容
+caption 标题
+clogroup 列
+span 选择几个的意思 而不是第几个
+ -->
+ <!-- 
+<table border="1" style="width:300px;">
+	<caption>这是一个表格标题</caption>
+	<colgroup style="background:white;" span="1"></colgroup>
+	<colgroup style="background:red;" span="1"></colgroup>
+	<tbody>
+		<tr style="background:red;">
+			<td>张三</td>
+			<td>男</td>
+			<td>未婚</td>
+		</tr>
+		<tr>
+			<td>李四</td>
+			<td>女</td>
+			<td>已婚</td>
+		</tr>
+	</tbody>
+	
+	<tfoot>
+		<tr>
+			<td colspan="3">统计:共两人</td>
+		</tr>
+	</tfoot>
+
+	<thead>
+		<tr>
+			<th>姓名</th>
+			<th>性别</th>
+			<th>婚姻</th>
+		</tr>
+	</thead>
+</table>
+ -->
+
+<!-- 
+<br>
+更灵活的设置列颜色
+<br>
+ -->
+<!-- 
+col 相当于占位符
+ -->
+ <!-- 
+<table border="1" style="width:300px;">
+	<colgroup>
+		<col>
+		<col style="background:red;">
+	</colgroup>
+	<tr>
+		<th>姓名</th>
+		<th>性别</th>
+		<th>婚姻</th>
+	</tr>
+
+	<tr>
+		<td>张三</td>
+		<td>男</td>
+		<td>未婚</td>
+	</tr>
+	<tr>
+		<td>李四</td>
+		<td>女</td>
+		<td>已婚</td>
+	</tr>
+</table>
+ -->
+
+<!--======================= 文档元素 =======================-->
+<!-- 
+此处很难测试出效果  因为这里的标签以区块形式存在  可以在区块后随便写一个东西  看能否换行
+能则表示区块标签起作用了
+比如:
+<header>
+	XXXXXXX
+</header>
+YYYYY
+如果输出YYYY换行了则表示header起作用了
+hgroup  组合标题
+nav     导航
+article 也是一个小整体 里面也可以分 头 尾 主体等
+address 可以嵌套在任何一个标签里面使用
+aside   一般是左右边界的一个导航区域块 参考微博 博客...
+以下两种大多浏览器不支持 就不演示了
+details 生成详情区域
+summary 在内部生成说明标签
+用途例如:商品详情页
+ -->
+ <!-- 
+<header>
+	<hgroup>
+		<h1>h1标题</h1>
+		<h4>h4标题</h4>
+	</hgroup>
+	<nav>
+		这里是一个导航
+	</nav>
+	这里存放网页标头部分:LOGO 标题 导航等
+</header>
+
+<section>
+	这里是文档的主体部分
+</section>
+
+<article>
+	<header>其他头</header>
+	<section>其他主体</section>
+	<address>其他联系信息</address>
+	<footer>其他尾</footer>
+</article>
+
+<aside>
+	<nav>aside导航</nav>
+	<header>aside导航头</header>
+	<section>aside导航主体</section>
+	<footer>aside导航尾</footer>
+</aside>
+
+<footer>
+	<h4>h4标题</h4>
+	这里存放网页尾部:版权声明 友情链接等
+	<address>这里是联系信息</address>
+</footer>
+ -->
+
+<!--======================= 嵌入元素 =======================-->
+<!--
+alt  用于打开图片失败后 会显示的文字
+ismap 点击坐标 供javaScript获取使用
+map   分区响应图 标签具体使用看教程 为了方便用dw来操作
+ -->
+ <!-- 
+ <a href="indexhtml.html">
+	<img ismap src="htmlpic//pic1.png" alt="侧视图1" width="100" height="100">
+
+	<img src="htmlpic//pic1.png" alt="侧视图1" width="150" height="100" usemap="#Map">
+    <map name="Map">
+      <area shape="rect" coords="13,11,47,37" href="http://www.baidu.com" target="_blank" alt="百度">
+      <area shape="circle" coords="122,38,17" href="http://www.soso.com" target="_blank" alt="搜搜">
+      <area shape="poly" coords="23,61,58,80,20,89" href="http://www.hao123.com" target="_blank" alt="好123">
+    </map>
+</a>
+ -->
+
+<!-- 
+iframe 嵌入一个文档
+src 表示初始化的时候默认显示页面
+name 和 target 配合使用  使跳转在内嵌文档显示
+ -->
+ <!-- 
+ <a href="http://www.baidu.com" target="in">百度</a>
+ <a href="http://www.hao123.com" target="in">好123</a>
+ <br>
+<iframe src="http://www.soso.com" width="800" height="600" name="in"></iframe>
+ -->
+
+<!-- 嵌入插件内容 -->
+<!-- 
+扩展浏览器功能  大部分用于添加插件的支持
+这里添加了一个土豆网的flash视频。type类型表示被插入内容的类型，这里不列出所有，
+后面如果遇到其他类型的文件，再继续探讨
+src    文件路径
+width  宽
+height 高
+<object>和<embed>类似  
+<object> 是html4的标准  还可以添加视频 音频等  不过在html5中已经有对应的专属标签  所以此标签被弱化了使用
+<embed> 是html5的标准
+ -->
+ <!-- 
+<embed src="http://www.tudou.com/v/i4ZZvFwfluI/&bid=05&rpid=50797543&resourceId=50797543_05_05_99/v.swf" type="application/x-shockwave-flash" width="480" height="400">
+</embed>
+ -->
+
+<!-- 显示进度 -->
+<!-- 
+<progress>
+一般通过js控制内部的值
+IE9以及更低的版本不支持此元素 
+
+<meter>
+范围值在min~max之中
+low 是过小提醒值  小于此值是显示黄色
+high 是过大提醒值  大于此值是显示黄色
+optimum 最佳值 表示起来没有任何效果 IE浏览器不支持此元素
+-->
+<!-- 
+<progress value="30" max="100"></progress>
+
+<meter value="60" min="10" max="100" low="40" high="80" optimum="60"></meter>
+ -->
+
+<!--======================= 音频和视频 =======================-->
+<!-- 
+测试视频文件
+htmlvideo//mp4
+htmlvideo//webm
+
+controls 播放控件
+autoplay 立刻开始播放
+loop     循环播放
+muted    静音状态
+proster  视频默认图
+preload  三个属性
+{
+none播放器不加载  
+metadata播放器之前只能加载元数据(宽高 第一帧画面等信息)
+auto播放器尽快请求浏览器下载整个视频(暂停的时候也会进行加载)
+}
+source 用于支持同一视频多种格式的情况  对其他浏览的兼容
+ -->
+<!-- 
+<video src="htmlvideo//mp4.mp4" width="640" height="480" controls autoplay loop muted>
+	
+</video>
+ -->
+
+<!-- <video src="htmlvideo//mp4.mp4" width="640" height="480" controls poster="htmlpic//pic1.png"></video> -->
+
+<!-- <video src="htmlvideo//mp4.mp4" width="640" height="480" controls preload="none"></video> -->
+<!-- 
+<video width="640" height="480" controls>
+	<source src="htmlvideo//mp4.mp4">
+	<source src="htmlvideo//webm.webm">
+</video>
+
+<audio controls>
+	<source src="htmlvideo//test.mp3" >
+</audio>
+ -->
+
+<!--======================= 表单元素(上) =======================-->
+<!-- 
+<form> 定义表单 这个范围内的模块都用于捕获用户输入的数据和提交
+action 表单提交后的页面
+method 有post和get两种提交表单方式
+enctype 表示浏览器对发送给服务器的数据所采用的编码格式
+{
+有三种: 
+application/x-www-form-urlencoded (默认编码,不能将文件上传到服务器)
+multipart/form-data (用于上传文件到服务器)
+text/plain (未规范的编码，不建议使用，不同浏览器理解不同)
+用例:<form enctype="multipart/form-data" ...
+target 跟嵌入元素的target相似 属性有:_blank(新标签打开) _parent,_self,_top
+}
+form里面的name  不用于提交  只用于程序调用
+autocomplete 默认on打开 off关闭   记录用户用户输入
+
+<input>表示用户输入数据
+autofocus 每次刷新默认光标聚焦在某个input上
+disabled 禁用输入
+autocomplete 单独对某一个input进行提示 通用是on或off
+value 默认输入的值
+form 让表单内的输入跟表单外的挂钩 即id和form关联
+id  全局属性 以后讲解
+
+label 两个作用:1.点击文字标题光标也可以进入输入框 2.用于往后css样式
+for  供给label用于实现label的第一个作用  与id挂钩就可以  实例如下user
+
+fieldset 分组
+{
+同样可以设置
+name
+form
+disable 
+作用与上述解释过的一样
+
+legend 分组说明标签
+}
+
+button 提交功能
+{
+type 属性包括:submit 提交  reset 重置  button 普通按钮(需要配合javaScript触发)
+当type是submit时候  可以动态修改form表单的属性
+命名规则:form+form属性 例如:formaction  formmethod  formenctype
+注意：此时会覆盖掉原有form的设置
+}
+-->
+<!-- 
+<form method="get" id="register" action="http://www.baidu.com" autocomplete="on">
+	
+	<fieldset>
+		<legend>注册分组</legend>
+		<label for="user">用户名：</label>
+		<input id="user" name="user">
+		<br>
+		<label>
+			电子邮件：<input name="email" form="register">
+		</label>
+
+	</fieldset>
+
+	<button type="submit" formaction="http://www.hao123.com">提交</button>
+	<button type="reset">重置</button>
+	<button type="button">按钮</button>
+</form>
+ -->
+<!-- 电子邮件：<input name="email" form="register"> -->
+
+<!--======================= 表单元素(中) =======================-->
+<!-- 
+type 属性总汇
+{
+	text 属性
+	{
+		size 文本框宽度(默认20)
+		maxlength 文本框最大字符长度
+		value 文本框初始值(火狐浏览器要深度刷新CTRL+F5)
+		readonly 只读状态 不可修改
+		disabled 禁用状态(提交不带上)
+		list  指定为文本框提供建议值的datalist元素 其值为datalist元素的id值
+		required 字段提示 表示为空时候的提示
+		placeholder 输入提示
+	}
+	password 属性  填写的东西*号 即不可见
+	{
+		除了正则和验证以外,其余和text属性一样
+	}
+	search 输入时候右边出现小叉(火狐浏览器不支持 其他都可以)
+	number 只允许输入提交数字
+	date 获取年月日(火狐 ie 不支持)
+	color 颜色
+	checkbox 复选框
+	radio 单选 name要一致 checked是默认选中
+	submit 同button上 这个属性提供了与button一样的额外属性 例如:formaction  formmethod  formenctype
+	reset  同button上
+	button 同button上
+	image 图片按钮 同样有alt width height等功能 同上
+	email 电子邮件
+	tel  电话号码 基本没什么用 输入跟text一样
+	url  网址  支持一般 部分浏览器检测到http://就能通过
+	hidden 隐藏控件  一般用于表单提交时候关联主键id提交 这个数据作为隐藏存在
+	file 文件上传
+	{
+		accept 指定接受类型
+		required 必须提供一个值 同上
+	}
+}
+-->
+<!-- <form action="http://www.baidu.com"> -->
+	<!-- <input type="text" name="user" maxlength="10" size="30" value="文本框初始值" readonly disabled> -->
+	 <!-- <input type="text" list="abc" required> -->
+
+	 <!-- <input type="password" placeholder="请输入密码"> -->
+	
+	<!-- <input type="search"> -->
+	<!-- <input type="number" min="10" max="100" step="2"> -->
+	<!-- 
+	<input type="date">
+	<input type="month">
+	<input type="time">
+	<input type="week">
+	<input type="datetime">
+	<input type="datetime-local">
+ 	-->
+	<!-- <input type="color" name="color"> -->
+	
+	<!-- 
+	音乐<input type="checkbox" name="music" value="1">
+	体育<input type="checkbox" name="sport" value="2">
+ 	-->
+ 	<!-- 
+	<input type="radio" name="sex" value="1" checked>男
+	<input type="radio" name="sex" value="2">女
+ 	-->
+ 	<!-- 
+	<input type="submit">
+	<input type="reset">
+	<input type="button">
+ 	-->
+	
+	<!-- <input type="image" src="htmlpic//pic1.png"> -->
+	<!-- 
+	<input type="email">
+	<input type="tel"> 
+	<input type="url">  
+ 	-->
+	
+	<!-- <input type="hidden" value="1" name="id">   -->
+	
+	<!-- <input type="file" accept="image/gif" required> -->
+
+	<!-- <button>提交</button> -->
+<!-- </form> -->
+<!-- 
+<datalist id="abc">
+	<option value="3">苹果</option>
+	<option>橘子</option>
+	<option label="香蕉" value="cc"></option>
+	<option  value="菠萝"></option>
+</datalist>
+ -->
+<!--======================= 表单元素(下) =======================-->
+<!-- 
+select 下拉列表
+size 下拉框长度
+multiple 是否可以多选 (CTRL+点击左键)
+autofocus 获取焦点
+required  必须选择后才通过
+selected 默认选定
+/////////////////////
+textarea 多行文本框
+类似disable readonly form maxlength autofocus placeholder required
+以上具体参考上述说过的
+row 行高
+cols 列宽
+wrap 是否插入换行符
+默认值soft 只提交文本信息  另外一个值hard 会把换行符也提交(火狐不支持)
+output 就是计算两个文本框之间的值,内嵌了javaScript功能
+novalidate 禁用表单验证
+-->
+<!-- <form action="http://www.baidu.com"> -->
+<!-- 
+	<select name="fruit" size="10" multiple required>
+		<optgroup label="水果">
+			<option value="1">苹果</option>
+			<option value="2">香蕉</option>
+			<option value="3" selected>橘子</option>
+		</optgroup>
+		<optgroup label="粗粮">
+			<option value="4">小米</option>
+			<option value="5">大米</option>
+			<option value="6">玉米</option>
+		</optgroup>
+	</select>
+ -->
+	<!-- <textarea row="20" cols="40" name="content" wrap="hard">请留下您的建议</textarea> -->
+	
+	<!-- <input type="text" required> -->
+	<!-- <input type="number" min="10" max="100"> -->
+	<!-- 正则表达 -->
+	<!-- <input type="text" placeholder="请输入区号+座机" pattern="^[\d]{2,4}\-[\d]{6,8}$"> -->
+	<!-- <button>提交</button> -->
+<!-- </form> -->
+
+<!-- javaScript计算表达 -->
+<!-- 
+<form action="http://www.baidu.com" oninput="res.value = num1.valueAsNumber*num2.valueAsNumber">
+	<input type="number" id="num1">x <input type="number" id="num2">=
+	<output for="num1 num2" name="res"></output>
+	<button>提交</button>
+</form>
+ -->
+<!--======================= 全局属性和其他 =======================-->
+<!-- 
+id  
+给元素分配一个唯一标识符 这种标识符通常用来给css和javascript调用选择元素 一个页面只能出现一次同一个id名称
+class
+相比id 它是一个批量的设置
+accesskey  快捷键操作 windows下alt+指定键 前提是浏览器alt不冲突
+contenteditable  让文本处于可编辑状态 设置true可以编辑 false不可编辑 默认是true
+dir 文字方向 左到右:"ltr"   右到左:"rtl"  默认从左道右
+hidden 隐藏元素
+lang 从局部去设置语言
+title 对元素内容进行提示 悬停提示框
+tabindex 表单中按下tab键 实现获取焦点的顺序 如果是-1 则不会被选中
+style 设置元素行内css样式
+-->
+<!-- 这里为了演示id功能 所以涉及少数css功能 -->
+<!-- 
+<style type="text/css">
+#abc {
+	color:red;
+}
+.abc {
+	color:red;
+}
+</style>
+ -->
+<!-- <p id="abc">这是id</p> -->
+<!-- 
+<p class="abc">这是class</p>
+<p class="abc">这是class</p>
+<p class="abc">这是class</p>
+ -->
+<!-- <input type="text" name="user" accesskey="n"> -->
+
+<!-- <p contenteditable="true">我可以修改吗</p> -->
+
+<!-- <p dir="rtl">文字方向</p> -->
+<!-- <p hidden>隐藏</p>	 -->
+<!-- <p lang="en">HTML5</p> -->
+<!-- <p title="这是HTML5教程">HTML5</p>  -->
+<!-- 
+<input type="text" name="user" tabindex="1">
+<input type="text" name="user" tabindex="2">
+ -->
+<!-- <p style="color:red;">CSS样式</p> -->
+
+
+
+</body>											<!--表示HTML内容结束-->
+</html>											<!--表示HTML文档结束-->
