@@ -1,0 +1,43 @@
+@charset "utf-8";
+/*插件手册:http://docs.emmet.io/cheat-sheet/*/
+
+/*以下列出是emment常用的css*/
+
+/*注意:插件具有纠错功能
+比如:
+pod和po和pos一样  相当于position: relative;
+poa是position: absolute; 但其实精确的写法是pos:a
+尽量用精确写法 也就是下面提到的写法
+*/
+/*以下是常用的列出 具体可以查手册*/
+/*
+po或pos
+position: relative;
+
+p
+padding: ;
+
+pos:a
+position: absolute;
+
+bg
+background: #000;
+
+bg+
+background: #fff url() 0 0 no-repeat;
+
+bg:n
+background: none;
+
+b
+bottom: ;
+
+m
+margin: ;
+
+m:a
+margin: auto;
+
+bd
+border: ;
+*/
