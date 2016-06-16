@@ -1,0 +1,90 @@
+@charset "utf-8";
+html{font-size:62.5%;font-family:'helvetica neue',tahoma,arial,'hiragino sans gb','Simsun',sans-serif} 
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,hr{margin:0;padding:0}
+body{line-height:1.333;font-size:12px}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-family:arial,'hiragino sans gb','microsoft yahei','Simsun',sans-serif}
+li{list-style:none}
+a:link,a:visited{text-decoration:none}
+
+
+.head-v3{position:relative;z-index:100;min-width:1000px;box-shadow: 0 1px 10px rgba(0,0,0,0.3);}
+.head-v3 .navigation-inner{margin:0 auto;width:980px;position:relative}
+.navigation-up{height:60px;background:#27303f}
+.navigation-up .navigation-v3{margin-left:155px;float:left;_margin-left:10px}
+.navigation-up .navigation-v3 ul{float:left}
+.navigation-up .navigation-v3 li{float:left;font:normal 16px/59px "microsoft yahei";color:#fff}
+.navigation-up .navigation-v3 .nav-up-selected{background:#344157}
+.navigation-up .navigation-v3 .nav-up-selected-inpage{background:#202833}
+.navigation-up .navigation-v3 li h2{font-weight:normal;padding:0;margin:0}
+.navigation-up .navigation-v3 li h2 a{padding:0 25px;color:#fff;display:inline-block;height:60px;font-family:"microsoft yahei"}
+
+.navigation-down{position:absolute;top:60px;left:0px;width:100%}
+.navigation-down .nav-down-menu{width:100%;margin:0;background:#344157;position:absolute;top:0px}
+.navigation-down .nav-down-menu .navigation-down-inner{margin:auto;width:1200px;position:relative}
+.navigation-down .nav-down-menu dl{float:left;margin:18px 80px 18px 0}
+.navigation-down .menu-1 dl{margin:20px 80px 25px 0}
+.navigation-down .menu-1 dt{font:normal 16px "microsoft yahei";color:#61789e;padding-bottom:10px;border-bottom:1px solid #61789e;margin-bottom:10px}
+.navigation-down .menu-1 dd a{color:#fff;font:normal 14px/30px "microsoft yahei"}
+.navigation-down .menu-1 dd a:hover{color:#60aff6}
+.navigation-down .menu-2 dd a,.navigation-down .menu-3 dd a{color:#fff;font:normal 16px "microsoft yahei"}
+
+.section{
+	position: relative;
+	min-width:1000px;
+	height: 1030;
+	border:3px solid red;
+}
+.loop{
+	width: 800px;
+	height: 480px;
+	padding: 0;
+	margin: 0 auto;
+}
+.ig{
+	position: absolute;
+}
+.igbtn{
+	position: relative;
+	width: 60px;
+	height:90px;
+	background: rgba(0,0,0,0.5);
+	color: #fff;
+	text-align: center;
+	line-height: 90px;
+	font-size: 40px;
+	top: 195px;
+	cursor: pointer;
+}
+.igbtn1{
+	float: left;
+}
+.igbtn2{
+	float: left;
+	left: 680px;
+}
+.tabs{
+	position: relative;	
+	top:450px;
+	left: 200px;
+
+}
+.tab{
+	width: 30px;
+	height: 30px;
+	background-color: #5388e8;
+	float:left;
+	text-align: center;
+	line-height: 30px;
+	color: #fff;
+	margin-right: 10px;
+	border-radius: 100%;
+}
+.curbg{
+	background-color: red;
+}
+.slider {
+    width: 1024px;
+    height: 550px;
+    margin: 0 auto;
+    overflow: hidden;
+}
