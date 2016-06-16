@@ -1,0 +1,434 @@
+@charset "utf-8";
+
+#headline{
+	width:100%;
+	min-width: 1263px;
+	height:300px;
+	background: linear-gradient(to right bottom,rgba(0,0,0,0.7),rgba(255,255,255,0)) ,url(../pic/p4.jpg) no-repeat center;
+}
+#headline .center{
+	width:1263px;
+	height: 300px;
+	margin:0 auto;
+}
+#headline hgroup{
+	padding: 100px 0 0 50px;
+
+}
+#headline h2{
+	color: #eee;
+	font-size: 36px;
+	letter-spacing: 1px;
+}
+#headline h3{
+	color: #eee;
+	font-size: 20px;
+	letter-spacing: 1px;
+}
+#container{
+	width:1263;
+	margin: 30px auto;
+}
+#container .sidebar{
+	width: 340px;
+	float:right;
+}
+#container .sidebox{
+	border: 1px solid #eee;
+	margin: 0 0 10px 0;
+	text-align: center;
+}
+#container .sidebox h2 {
+	font-size: 20px;
+	font-weight: normal;
+	letter-spacing: 1px;
+	text-indent: 8px;
+	height: 40px;
+	line-height: 35px;
+	background-color: #fafafa;
+	color: #666;
+	text-align: left;
+}
+#container .tag {
+	padding:10px 0;
+}
+/* 
+此处因为大量的a标签不利于网站在被seo搜索时候
+被认为是恶意堆积关键字 网站被降评 所以用ul li
+*/
+#container .tag li{
+	display: inline-block;
+	width:100px;
+	height: 35px;
+	line-height: 35px;
+	margin:2px 0;
+	background-color: #eee;
+	text-align: left;
+	text-indent: 8px;
+}
+#container .tag a{
+	display: block;
+	color: #999;
+}
+#container .tag a:hover{
+	background-color: #458b00;
+	color: #fff;
+}
+#container .figure {
+	padding: 10px 0;
+}
+#container figure {
+	display: inline-block;
+	padding: 4px;
+	color: #666;
+}
+#container .box {
+	padding:10px 0;
+}
+#container .box a{
+	display: inline-block;
+	width:150px;
+	height: 40px;
+	line-height: 40px;
+	margin:2px 0;
+	text-align: left;
+	text-indent: 35px;
+	color: #999;
+}
+#container .box a.trea1{
+	background: #eee url(../pic/p6.jpg) no-repeat 10px center;
+}
+/*#container .box a.trea1:hover{
+	background-color: #458b00;
+}*/
+#container .box a.trea2{
+	background: #eee url(../pic/p6.jpg) no-repeat 10px center;
+}
+#container .box a.trea3{
+	background: #eee url(../pic/p6.jpg) no-repeat 10px center;
+}
+#container .box a.trea4{
+	background: #eee url(../pic/p6.jpg) no-repeat 10px center;
+}
+#container .list{
+	width: 910px;
+	float:left;
+}
+#container .infor{
+	height: 43px;
+	line-height: 45px;
+	background-color: #eee;
+	margin: 0 0 20px 0;
+}
+#container .p2 .left{
+	display: inline-block;
+	float:left;
+}
+#container .p2 .left li{
+	display: inline-block;
+	width: 150;
+	height: 43px;
+	line-height: 43px;
+	text-align: center;
+}
+#container .p2 .left li a{
+	color: #666;
+}
+#container .p2 .left li:first-child{
+	background-color: #fff;
+	border-top: 2px solid #458b00;
+	position: relative;
+	left: 1px;
+}
+#container .p2 .right{
+	display: inline-block;
+	padding: 0 20px 0 0;
+	float:right;
+}
+#container .p2 .right li {
+	display: inline-block;
+	width: 60px;
+	height:45px;
+	line-height: 45px;
+	text-align: center;
+}
+#container .p2 .right a {
+	padding: 3px 8px;
+	color: #666;
+}
+#container .p2 .right a.selected, #container .p2 .right a:hover{
+	background-color: #458b00;
+	color: #fff;
+}
+#container .tour {
+	width:908px;
+	padding: 0;
+	margin: 0 0 20px 0;
+	border: 1px solid #eee;
+	position: relative;
+}
+#container .tour img {
+	float:left;
+}
+#container .tour figcaption{
+	width:528px;
+	height: 230;
+	float:right;
+}
+#container .tour hgroup {
+	width:300px;
+}
+#container .tour h2 {
+	font-size: 24px;
+	color: #333;
+	font-weight: normal;
+	padding: 10px 0 10px 25;
+}
+#container .tour h3 {
+	font-size: 16px;
+	color: #666;
+	font-weight: normal;
+	padding: 10px 0 10px 25;
+	line-height: 1.5;
+}
+#container .tour ol {
+	padding: 0 0 0 25px;
+	color: #666;
+	line-height: 2;
+}
+#container .tour mark {
+	background-color: #fff;
+	border: 1px solid #458b00;
+	border-radius: 4px;
+	padding: 0 5px;
+	color: #458b00;
+}
+#container .tour .buy {
+	position: absolute;
+	top: 55px;
+	right:30px;
+}
+#container .tour .price {
+	font-size: 20px;
+	color: #f60;
+}
+#container .tour .price strong{
+	font-size: 36px;
+}
+#container .tour .price s{
+	font-size: 16px;
+	color: #999;
+}
+#container .tour .reserve{
+	margin: 10px 0 0 0;
+}
+#container .tour .reserve a{
+	display: block;
+	width: 152px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 4px;
+	font-size: 20px;
+	color: #fff;
+	background-color: #f60;
+}
+#container .tour .type{
+	width: 90px;
+	height: 25px;
+	line-height: 25px;
+	font-size: 14px;
+	text-align: center;
+	color: #fff;
+	background-color: #59b200;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+#container .tour .disc {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 52px;
+	height: 52px;
+	background: url(../pic/p7.jpg) no-repeat;
+}
+#container .tour .disc span{
+	display: block;
+	transform: rotate(45deg); 
+	width: 52px;
+	height: 52px;
+	padding: 5px 0 0 0;
+	text-indent: 7px;
+	font-size: 14px;
+	color: #ff7a4d;
+}
+#container .tour footer {
+	width:528px;
+	height:30px;
+	line-height: 30px;
+	letter-spacing: 1px;
+	text-indent: 25px;
+	background-color: #fafafa;
+	position: absolute;
+	bottom:0;
+}
+#container .p2 .more,#container .p4 .more{
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	background-color: #fafafa;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 18px;
+	color: #666;
+}
+#container .p3,#container .p4,#container .p5{
+	color: #666;
+	font-size: 20px;
+}
+#container .p3 h2,#container .p4 h2,#container .p5 h2{
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px dashed #999;
+	padding: 0 0 15px 0;
+	font-size: 30px;
+	font-weight: normal;
+}
+#container .p3 .type{
+	font-size: 20px;
+	margin: 20px 0 10px 0;
+	border: none;
+}
+#container .p3 .type mark{
+	color: #fff;
+	background-color: #458b00;
+	padding: 5px 8px;
+	border-radius: 4px;
+	margin:  0 10 0 16px;
+}
+#container .p3 .left{
+	width:43%;
+	display: inline-block;
+}
+#container .p3 .right{
+	width:43%;
+	display: inline-block;
+}
+#container .p3 .button{
+	width:9%;
+	display: inline-block;
+}
+#container .p3 p{
+	line-height: 3;
+}
+#container .p3 .form input{
+	width: 250px;
+	height: 30px;
+	background-color: 1px solid #fff;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	color: #666;
+	padding: 5px;
+	margin: 0 0 0 16px;
+	font-size: 18px;
+}
+#container .p3 .submit{
+	display: block;
+	width: 90px;
+	height: 90px;
+	line-height: 90px;
+	text-align: center;
+	border-radius: 4px;
+	font-size: 20px;
+	color: #fff;
+	background-color: #f60;
+	border: none;
+	position: relative;
+	top: 8px;
+	cursor: pointer;
+}
+#container .p3 .new{
+	margin: 20px 0 0 0;
+}
+#container .p3 .new ul{
+	margin: 20px 0 0 0;
+}
+#container .p3 .new li{
+	display: inline-block;
+	padding: 5px 10px;
+}
+#container .p3 .new li:first-child{
+	padding-left: 0;
+}
+#container .p3 .new li:nth-child(2){
+	background-color: #458b00;
+	color: #fff;
+	border-radius: 4px;
+}
+#container .p3 table{
+	margin: 20px 0 0 0;
+	width: 100%;
+	border: 1px solid #ddd;
+	border-collapse: collapse;
+}
+#container .p3 table th{
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 1px solid #ddd;
+}
+#container .p3 table td{
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 1px solid #ddd;
+	text-align: center;
+}
+#container .p3 table tr:nth-child(2n){
+	background-color: #fafafa;
+}
+#container .p3 table tr:hover{
+	background-color: #eee;
+}
+#container .p3 .price{
+	color: #f60;
+}
+#container .p3 .more{
+	color: #666;
+}
+#container .p3 .reserve{
+	display: inline-block;
+	width: 80px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	border-radius: 4px;
+	font-size: 20px;
+	color: #fff;
+	background-color: #f60;
+}
+#container .p4 figure{
+	border: 1px solid #ddd;
+	display: inline-block;
+	padding: 4px;
+	border-radius: 4px;
+	margin:15px 5px 15px 0;
+	width:435px;
+	text-align: left;
+	position: relative;
+}
+#container .p4 figcaption{
+	text-align: center;
+	padding: 5px 0;
+}
+#container .p5 p{
+	line-height: 2;
+	margin: 20px 0;
+}
+#container .p5 address{
+	line-height: 1.6;
+	margin: 20px 0;
+	font-style: normal;
+}

@@ -1,0 +1,145 @@
+@charset "utf-8";
+
+/* 
+选择器:
+1.元素选择器 
+一般用于通用的css定义 在局部或者某个单一样式不适用,
+除非你的网站非常小,小到整个页面元素不超过5个,那倒是可以用
+定义:body{}
+2.id选择器
+表明这个元素是唯一性,不能在当前页面的其他元素定义相同id。
+对于中小型网站,一般是担任设计制作,元素标签不太多,可以在布局
+元素上使用。比如<nav>、<header>、<section>、<footer>的顶层元素上
+定义:#nav{}
+3.class选择器
+就是可以定义多个实现相同的效果。而实际应用中,比较适合大中型web项目。
+首先在多人维护的项目中,使用class也避免定义冲突:其次在一个元素需要多个
+样式切换或同时使用时,也只有class才能实现。再此项目偏大时,使用class也
+避免多个模块切换的冲突
+定义:.center{}
+
+通过上述简单分析 这个旅行社网站属于中小型网站 
+通用样式用元素定义性 顶层的布局元素使用id型 其他标签一律class定义性
+*/
+
+body,h1,h2,h3,ul,ol,p,figure{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #fff;
+	font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "\5B8B\4F53", simsun, sans-serif;
+}
+ul,ol{
+	list-style:none outside none;
+}
+/* 
+因为大背景图用了相对定位 所以层次较高 
+这里为了显示阴影效果box-shadow
+所以也设置相对定位
+*/
+#header{
+	width:100%;
+	min-width: 1263px;
+	height:70px;
+	background: #333;
+	box-shadow: 0 1px 10px rgba(0,0,0,0.3);
+	position: relative;
+	z-index: 999;
+}
+#header .center{
+	width:1263px;
+	height:70px;
+	margin: 0 auto;
+}
+/*
+LOGO采用的是h1标签,一般为了让搜索引擎更好的抓取关键字,我们建议一个页面只有一个h1,
+而且是最重要的关键字放在里面。在首页上,最重要的关键词就是旅行社的名称。当然,如果
+在其他页面,比如新闻网站的单个新闻,最重要的应该是新闻标题,网站的名称就其次了。
+ */
+#header .logo{
+	width:240px;
+	height:70px;
+	background-image: url(../pic/p1.jpg);
+	text-indent: -9999px;
+	float:left;
+}
+a{
+	text-decoration:none;
+}
+#header .link{
+	width:650px;
+	height:70px;
+	float:right;
+	line-height:70px;
+	color: #eee;
+}
+/*注: .link li = .link > li*/
+#header .link li{
+	width:120px;
+	text-align:center;
+	float:left;
+}
+/*注: .link a = .link li > a =.link > li > a*/
+#header .link a{
+	color: #eee;
+	display:block;
+}
+/*注: 
+#header .link a:hover,#header .active a = 
+#header .link li > a:hover,#header > section > ul > li.active a
+*/
+#header .link a:hover,#header .active a{
+	background-color: #000;
+}
+.none{
+	display: none;
+}
+/*此处clear:both后 margin就无效果了*/
+#footer{
+	height:360px;
+	background-color: #222;
+	clear:both;
+	position: relative;
+	top:20px;
+}
+#footer .top{
+	width: 1263px;
+	height: 281px;
+	margin:0 auto;
+	text-align: center;
+}
+/*class设置了left center right为了方便日后微调*/
+#footer .block{
+	width: 410px;
+	height: 280px;
+	display: inline-block;
+	text-align: left;
+	color: #ccc;
+	vertical-align: top;
+}
+#footer h2{
+	font-size: 24px;
+	font-weight: normal;
+	padding: 20px 0 0 20px;
+}
+#footer ul{
+	font-size: 18px;
+	color: #777;
+	text-indent: 20px;
+	line-height: 2;
+}
+#footer hr{
+	width: 90%;
+	border:1px dashed #333;
+
+}
+#footer .bottom{
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+	color: #777;
+	margin:0 auto;
+	background-color: #000;
+	border-top: 1px solid #444;
+}
