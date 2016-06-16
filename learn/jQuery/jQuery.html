@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery</title>
+	<script src="./jquery-1.12.3.js"></script>
+	<script src="./layer/layer.js"></script>
+  <link rel="stylesheet" href="jQuery.css">
+  <link rel="stylesheet" href="animate.css">
+</head>
+
+
+<body>
+	 <h1>这里是jQuery</h1>
+   <p id="ready">this is ready</p>
+   <p id="p1">This is a paragraph.</p>
+   <p class="cl">this is class</p>
+    <p style="display:none">This is another paragraph.</p>
+    <button type="button" class="btn1">Click me</button>
+    <button type="button" class="btn2">hide</button>
+    <button type="button" class="btn3">fade</button>
+    <button type="button" class="btn4">fadeToggle</button>
+    <button type="button" class="btn5">fadeTo</button>
+    <button type="button" class="btn6">layer</button>
+    <button type="button" class="btn19">on方法</button>
+    <div>
+      <figure class="img img1">
+        <img src="./img/1.jpg" alt="">
+        <figcaption>图1</figcaption>
+      </figure>
+      <figure class="img img2">
+        <img src="./img/2.jpg" alt="">
+        <figcaption>图2</figcaption>
+      </figure>
+      <figure class="img img3">
+        <img src="./img/3.png" alt="">
+        <figcaption>图3</figcaption>
+      </figure>
+    </div>
+    <div class="panel">
+      <p>内容1 内容1 内容1 内容1</p>
+      <p>内容2 内容2 内容2 内容2 内容2 内容2</p>
+    </div>
+    <p class="flip">打开</p>
+    <p>&nbsp;</p>
+    <div id="demo" class="animated">
+    	<div class="ani">动画</div>
+		<p>&nbsp;</p>
+    	<p class="btns"><button>shake</button><button>flash</button><button>swing</button><button>bounce</button><button>tada</button><button>wobble</button><button>pulse</button></p>
+    	<p class="btns"><button>flip</button><button>flipInX</button><button>flipOutX</button><button>flipInY</button><button>flipOutY</button></p>
+		<p class="btns"><button>fadeIn</button><button>fadeInUp</button><button>fadeInDown</button><button>fadeInLeft</button><button>fadeInRight</button><button>fadeInUpBig</button><button>fadeInDownBig</button><button>fadeInLeftBig</button><button>fadeInRightBig</button></p>
+		<p class="btns"><button>fadeOut</button><button>fadeOutUp</button><button>fadeOutDown</button><button>fadeOutLeft</button><button>fadeOutRight</button><button>fadeOutUpBig</button><button>fadeOutDownBig</button><button>fadeOutLeftBig</button><button>fadeOutRightBig</button></p>
+		<p class="btns"><button>slideInDown</button><button>slideInLeft</button><button>slideInRight</button><button>slideOutUp</button><button>slideOutLeft</button><button>slideOutRight</button></p>
+		<p class="btns"><button>bounceIn</button><button>bounceInDown</button><button>bounceInUp</button><button>bounceInLeft</button><button>bounceInRight</button></p>
+		<p class="btns"><button>bounceOut</button><button>bounceOutDown</button><button>bounceOutUp</button><button>bounceOutLeft</button><button>bounceOutRight</button></p>
+		<p class="btns"><button>rotateIn</button><button>rotateInDownLeft</button><button>rotateInDownRight</button><button>rotateInUpLeft</button><button>rotateInUpRight</button></p>
+		<p class="btns"><button>rotateOut</button><button>rotateOutDownLeft</button><button>rotateOutDownRight</button><button>rotateOutUpLeft</button><button>rotateOutUpRight</button></p>
+		<p class="btns"><button>lightSpeedIn</button><button>lightSpeedOut</button><button>hinge</button><button>rollIn</button><button>rollOut</button></p>
+		
+    </div>
+	<p>&nbsp;</p>
+	<button type="button" class="btn7">开始</button>
+    <button type="button" class="btn8">停止</button>
+    <button type="button" class="btn9">停止所有</button>
+    <button type="button" class="btn10">停止但要完成</button>
+	<div class="flash" style="background:#98bf21;height:100px;width:200px;position:absolute;">HELLO</div>
+    <p>&nbsp;</p>
+	<div class="dd" style="width:500px;margin:100px 0 0 0;">
+		<button type="button" class="btn11">div</button>
+		<button type="button" class="btn12">ul</button>
+		<button type="button" class="btn13">li</button>
+		<button type="button" class="btn14">div以下的所有元素</button>
+		<button type="button" class="btn15">div直属元素</button>
+		<button type="button" class="btn16">div指定直属元素</button>
+		<button type="button" class="btn17">div查找元素</button>
+		<button type="button" class="btn18">查找同胞元素</button>
+		<br>div (曾祖父)
+	    <p>&nbsp;</p>
+	    <ul class="u1">ul (祖父)  
+	      <li>li (直接父)
+	        <br><span>自己</span>
+	      </li>
+	    </ul> 
+	    <p>&nbsp;</p>
+	    <ul class="u2">ul (祖父2) 
+	    	<li>li (直接父2)
+		    	<br><span>孙子</span>
+		      </li>
+	    </ul>  
+  	</div>
+<!-- 轮播图实例 -->
+<div class="loop">
+  <div class="igs">
+      <div class="ig"><img src="./img/loop_1.png"></div>
+      <div class="ig"><img src="./img/loop_2.png"></div>
+      <div class="ig"><img src="./img/loop_3.png"></div>
+      <div class="ig"><img src="./img/loop_4.png"></div>
+      <div class="ig"><img src="./img/loop_5.png"></div>
+  </div>
+  <div class="igbtn igbtn1"><</div>
+  <div class="igbtn igbtn2">></div>
+  <div class="tabs">
+      <div class="tab curbg">1</div>
+      <div class="tab">2</div>
+      <div class="tab">3</div>
+      <div class="tab">4</div>
+      <div class="tab">5</div>
+  </div>
+</div>
+
+<!-- 手风琴图片切换效果 -->
+<div class="pic">
+   <ul>
+      <li class="pic1">
+          <a href="javascript:;">
+              <div class="txt">
+                  <p class="p1">分图1</p>
+                  <p class="p2">分图1描述</p>
+              </div>
+          </a>
+      </li>
+      <li class="pic2">
+          <a href="javascript:;">
+              <div class="txt">
+                  <p class="p1">分图2</p>
+                  <p class="p2">分图2描述</p>
+              </div>
+          </a>
+      </li>
+      <li class="pic3">
+          <a href="javascript:;">
+              <div class="txt">
+                  <p class="p1">分图3</p>
+                  <p class="p2">分图3描述</p>
+              </div>
+          </a>
+      </li>
+      <li class="pic4">
+          <a href="javascript:;">
+              <div class="txt">
+                  <p class="p1">分图4</p>
+                  <p class="p2">分图4描述</p>
+              </div>
+          </a>
+      </li>
+      <li class="pic5">
+          <a href="javascript:;">
+              <div class="txt">
+                  <p class="p1">分图5</p>
+                  <p class="p2">分图5描述</p>
+              </div>
+          </a>
+      </li>
+   </ul>
+</div>
+
+<p>&nbsp;</p>
+
+<select id="selProvince">
+    <option>---请选择---</option>
+</select>
+<select id="selCity">
+    <option>---请选择---</option>
+</select>
+<select id="selCountry">
+    <option>---请选择---</option>
+</select>
+
+<p>&nbsp;</p>
+
+<!-- 
+marquee滚动效果
+
+1.滚动方向direction（包括4个值：up、 down、 left和 right）
+
+　　语法：<marquee direction="滚动方向">...</marquee>
+
+2.滚动方式behavior（scroll:循环滚动，默认效果； slide:只滚动一次就停止； alternate:来回交替进行滚动）
+
+　　语法：<marquee behavior="滚动方式">...</marquee>
+
+3.滚动速度scrollamount（滚动速度是设置每次滚动时移动的长度，以像素为单位）
+
+　　语法：<marquee scrollamount="5">...</marquee>
+
+4.滚动延迟scrolldelay（设置滚动的时间间隔，单位是毫秒）
+
+　　语法：<marquee scrolldelay="100">...</marquee>
+
+5.滚动循环loop（默认值是-1，滚动会不断的循环下去）
+
+　　语法：<marquee loop="2">...</marquee>
+
+6.滚动范围width、height
+
+7.滚动背景颜色bgcolor
+
+8.空白空间hspace、vspace
+
+ -->
+<div class="con">
+    <marquee direction="up">
+          走马灯开始<br/>
+          444<br/>
+          555<br/>
+          666<br/>
+          777<br/>
+          888<br/>
+          999<br/>
+          000<br/>
+          走马灯结束
+    </marquee>
+</div>
+
+
+<div>
+  这里是测试position基准位置
+  <div class="position-absolute">
+      position-absolute
+  </div>
+  <div class="position-relative">
+      position-relative
+  </div>
+  这里是测试position结束位置
+</div>
+
+<!-- 以下滤镜仅chrome和ie支持(此格式为谷歌)  火狐 opera不支持 -->
+<div class="filter">
+  <div class="filterbox">
+    grayscale: 特效黑白
+    <div class="filterScale" style="-webkit-filter:grayscale();">
+    <img src="./img/loop_2.png" />
+    </div>
+  </div>
+  <div class="filterbox">
+    sepia: 图片好像很古老的一样
+    <div class="filterScale" style="-webkit-filter:sepia();">
+    <img src="./img/loop_2.png"/>
+    </div>
+  </div>
+  <div class="filterbox">
+    Invert: 反色
+    <div class="filterScale" style="-webkit-filter:invert();">
+    <img src="./img/loop_2.png" />
+    </div>
+  </div>
+  <div class="filterbox">
+    saturate: 改变图片的饱和度 1:100% 2:200% ...
+    <div class="filterScale" style="-webkit-filter:saturate(0.5);">
+    <img src="./img/loop_2.png"/>
+    </div>
+  </div>
+  <div class="filterbox">
+    hue-rotate:  改变图片的色相
+    <div class="filterScale" style="-webkit-filter:hue-rotate(90deg);">
+    <img src="./img/loop_2.png" />
+    </div>
+  </div>
+  <div class="filterbox">
+    brightness:  改变图片的亮度
+    <div class="filterScale" style="-webkit-filter:brightness(.5);">
+    <img src="./img/loop_2.png" />
+    </div>
+  </div>
+  <div class="filterbox">
+    contrast: 改变图片的对比度，整个psd的
+    <div class="filterScale" style="-webkit-filter:contrast(2);">
+    <img src="./img/loop_2.png" />
+    </div>
+  </div>
+  <div class="filterbox">
+    contrast: 改变图片的对比度，整个psd的
+    <div class="filterScale" style="-webkit-filter:contrast(2);">
+    <img src="./img/loop_2.png" />
+    </div>
+  </div>
+  <div class="filterbox">
+    blur: 模糊
+    <div class="filterScale" style="-webkit-filter:blur(3px);">
+    <img src="./img/loop_2.png" />
+    </div>
+  </div>
+</div>
+
+<!-- 
+您是否很疑惑为什么我们没有在 <script> 标签中使用 type="text/javascript" ？
+在 HTML5 中，不必那样做了。
+JavaScript 是 HTML5 以及所有现代浏览器中的默认脚本语言！
+ -->
+<script src="jqtest.js">
+//预加载区别:
+//               window.onload                             $(document).ready()
+//执行时机:       必须等待网页全部加载完毕           只需要等待网页中DOM结构加载完毕,就能执行包裹代码
+//              (包括图片等)      
+//              然后执行包裹代码                                 
+//
+//执行次数:    只执行一次 如果有第二次 第一次被覆盖   可以执行多次,第N次都不会被上一次覆盖
+//
+//简写方案:        无                                     $(function(){ ... });
+//
+//$(document).ready 这是为了防止文档在完全加载（就绪）之前运行 jQuery 代码
+//id表示:#XXX  标签:直接填"标签"
+//var aa = jQuery.noConflict();//$默认指jQuery  把$替换为aa 
+// $(document).ready(function(){
+//   ...写在jqtest.js里面
+// });
+// 
+// 返回原生DOM对象: $("#id").get(索引)  索引标识相同id下返回第几个 0开始
+
+// -------------------------jQuery 效果-------------------------
+//淡入淡出:
+//可选的 speed 参数规定效果的时长。它可以取以下值："slow"、"fast" 或毫秒。
+//可选的 callback 参数是 fading 完成后所执行的函数名称。
+//$(selector).fadeIn(speed,callback);
+//$(selector).fadeOut(speed,callback);
+//$(selector).fadeToggle(speed,callback);
+//fadeToggle() 方法可以在 fadeIn() 与 fadeOut() 方法之间进行切换。
+//滑动
+//$(selector).slideDown(speed,callback); 方法用于向下滑动元素
+//$(selector).slideUp(speed,callback); 方法用于向上滑动元素。
+//$(selector).slideToggle(speed,callback); 方法可以在 slideDown() 与 slideUp() 方法之间进行切换。
+//动画
+//$(selector).animate({params},speed,callback); 方法用于创建自定义动画。
+//必需的 params 参数定义形成动画的 CSS 属性。
+//可选的 speed 参数规定效果的时长。它可以取以下值："slow"、"fast" 或毫秒。
+//可选的 callback 参数是动画完成后所执行的函数名称。
+//停止动画
+//$(selector).stop(stopAll,goToEnd);
+// 可选的 stopAll 参数规定是否应该清除动画队列。默认是 false，即仅停止活动的动画，允许任何排入队列的动画向后执行。
+// 可选的 goToEnd 参数规定是否立即完成当前动画。默认是 false。
+// 因此，默认地，stop() 会清除在被选元素上指定的当前动画。
+// -------------------------jQuery HTML-------------------------
+//元素的获取和设置
+// text() - 设置或返回所选元素的文本内容
+// html() - 设置或返回所选元素的内容（包括 HTML 标记）
+// val() - 设置或返回表单字段的值
+//元素的添加删除
+// append() - 在被选元素的结尾插入内容
+// prepend() - 在被选元素的开头插入内容
+// after() - 在被选元素之后插入内容
+// before() - 在被选元素之前插入内容
+// remove() - 删除被选元素（及其子元素）
+// remove(".xxx"或者"#xxx") 方法也可接受一个参数(参数以class或者id等形式存在)，允许您对被删元素进行过滤。
+// 
+// empty() - 从被选元素中删除子元素
+// 
+// addClass() - 向被选元素添加一个或多个类
+// removeClass() - 从被选元素删除一个或多个类
+// toggleClass() - 对被选元素进行添加/删除类的切换操作
+// css() 方法设置或返回被选元素的一个或多个样式属性。
+//css({"propertyname":"value","propertyname":"value",...},{...});设置多个 CSS 属性
+//
+//尺寸
+//width() 方法设置或返回元素的宽度（不包括内边距、边框或外边距）。
+// height() 方法设置或返回元素的高度（不包括内边距、边框或外边距）
+// innerWidth() 方法返回元素的宽度（包括内边距）。
+// innerHeight() 方法返回元素的高度（包括内边距）。
+// outerWidth() 方法返回元素的宽度（包括内边距和边框）。
+// outerHeight() 方法返回元素的高度（包括内边距和边框）。
+// 
+//  -------------------------jQuery 遍历-------------------------
+//  parent() 方法返回被选元素的直接父元素。
+//  parents() 方法返回被选元素的所有祖先元素，它一路向上直到文档的根元素 (<html>)。
+//  parents("xx")可以使用可选参数来过滤对祖先元素的搜索
+//  parentsUntil() 方法返回介于两个给定元素之间的所有祖先元素。
+//  children() 方法返回被选元素的所有直接子元素。
+//  find() 方法返回被选元素的后代元素，一路向下直到最后一个后代。参数填*代表查找所有元素
+//  siblings() 方法返回被选元素的所有同胞元素。可选参数来过滤对同胞元素的搜索(类似同上 不演示)
+//  next() 方法返回被选元素的下一个同胞元素
+//  nextUntil("xxx") 方法返回调用元素与xxx 介于两个给定参数之间的所有跟随的同胞元素。
+//  prev(), prevAll() 以及 prevUntil()方法的工作方式与上面的方法类似，只不过方向相反而已：
+//  它们返回的是前面的同胞元素（在 DOM 树中沿着同胞元素向后遍历，而不是向前）。
+// 
+//  -------------------------jQuery 事件------------------------- 
+// $(selector).on(event,childSelector,data,function,map)
+// event 必需   必需是有效事件 比如:mousedown mouseleave click...
+// childSelector 可选 触发事件运行的函数
+// data 可选 规定传递到函数的额外数据。
+// function 可选。规定当事件发生时运行的函数。
+// map 规定事件映射 ({event:function, event:function, ...})，包含要添加到元素的一个或多个事件，以及当事件发生时运行的函数。
+
+
+</script>
+
+
+
+</body>
+</html>
